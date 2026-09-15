@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sondage — APCNB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- FRANÇAIS -->
+    <div data-lang-block="fr">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Accueil</a>
+          <p class="eyebrow">Sondage</p>
+          <h1 class="subpage-title">Sondage d'intérêt — future adhésion</h1>
+          <p class="subpage-lead">Aidez-nous à bâtir une association qui répond à vos besoins. Ce sondage prend moins de 3 minutes et vos réponses sont confidentielles. (Démonstration.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container" style="max-width:760px;">
+          <form class="content-card" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; window.scrollTo({top:0,behavior:'smooth'});">
+            <p class="form-note" style="color:var(--ok);font-weight:600;background:rgba(47,111,79,.1);padding:12px 16px;border-radius:9px;margin:0 0 18px;" hidden>Merci! Démonstration : aucune donnée n'est transmise.</p>
+
+            <div class="survey-q"><span class="q-label">1. Votre profil</span>
+              <label class="opt"><input type="radio" name="profil" /> Étudiant·e</label>
+              <label class="opt"><input type="radio" name="profil" /> Professionnel·le en exercice</label>
+              <label class="opt"><input type="radio" name="profil" /> Diplômé·e en recherche d'emploi</label>
+              <label class="opt"><input type="radio" name="profil" /> Autre</label>
+            </div>
+            <div class="survey-q"><span class="q-label">2. Domaine d'études ou de pratique</span><input type="text" /></div>
+            <div class="survey-q"><span class="q-label">3. Connaissez-vous l'APCNB?</span>
+              <label class="opt"><input type="radio" name="connait" /> Oui, bien</label>
+              <label class="opt"><input type="radio" name="connait" /> Un peu</label>
+              <label class="opt"><input type="radio" name="connait" /> Non, c'est la première fois</label>
+            </div>
+            <div class="survey-q"><span class="q-label">4. Quel est votre intérêt à devenir membre?</span>
+              <label class="opt"><input type="radio" name="interet" /> Très intéressé·e</label>
+              <label class="opt"><input type="radio" name="interet" /> Intéressé·e</label>
+              <label class="opt"><input type="radio" name="interet" /> Neutre</label>
+              <label class="opt"><input type="radio" name="interet" /> Peu intéressé·e</label>
+              <label class="opt"><input type="radio" name="interet" /> Pas intéressé·e</label>
+            </div>
+            <div class="survey-q"><span class="q-label">5. Quels services seraient les plus utiles? (plusieurs choix)</span>
+              <label class="opt"><input type="checkbox" /> Bottin et reconnaissance professionnelle</label>
+              <label class="opt"><input type="checkbox" /> Formation continue accréditée</label>
+              <label class="opt"><input type="checkbox" /> Code de déontologie et encadrement</label>
+              <label class="opt"><input type="checkbox" /> Réseautage et événements</label>
+              <label class="opt"><input type="checkbox" /> Défense de la profession</label>
+              <label class="opt"><input type="checkbox" /> Reconnaissance du titre</label>
+              <label class="opt"><input type="checkbox" /> Offres d'emploi</label>
+            </div>
+            <div class="survey-q"><span class="q-label">6. Quelle cotisation annuelle vous semblerait raisonnable?</span>
+              <label class="opt"><input type="radio" name="cotis" /> Moins de 50 $</label>
+              <label class="opt"><input type="radio" name="cotis" /> 50 $ à 100 $</label>
+              <label class="opt"><input type="radio" name="cotis" /> 100 $ à 150 $</label>
+              <label class="opt"><input type="radio" name="cotis" /> Plus de 150 $</label>
+            </div>
+            <div class="survey-q"><span class="q-label">7. Quels sujets de formation vous intéressent?</span><textarea rows="2"></textarea></div>
+            <div class="survey-q"><span class="q-label">8. Langue de service préférée</span>
+              <label class="opt"><input type="radio" name="langue" /> Français</label>
+              <label class="opt"><input type="radio" name="langue" /> Anglais</label>
+              <label class="opt"><input type="radio" name="langue" /> Les deux</label>
+            </div>
+            <div class="survey-q"><span class="q-label">9. Commentaires</span><textarea rows="2"></textarea></div>
+            <div class="survey-q"><span class="q-label">10. Pour être tenu·e informé·e (facultatif)</span>
+              <input type="text" placeholder="Nom" style="margin-bottom:8px;" />
+              <input type="text" placeholder="Courriel" />
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer mes réponses</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- ENGLISH -->
+    <div data-lang-block="en">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Home</a>
+          <p class="eyebrow">Survey</p>
+          <h1 class="subpage-title">Interest survey — future membership</h1>
+          <p class="subpage-lead">Help us build an association that meets your needs. This survey takes under 3 minutes and your answers are confidential. (Demonstration.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container" style="max-width:760px;">
+          <form class="content-card" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; window.scrollTo({top:0,behavior:'smooth'});">
+            <p class="form-note" style="color:var(--ok);font-weight:600;background:rgba(47,111,79,.1);padding:12px 16px;border-radius:9px;margin:0 0 18px;" hidden>Thank you! Demonstration: no data is transmitted.</p>
+
+            <div class="survey-q"><span class="q-label">1. Your profile</span>
+              <label class="opt"><input type="radio" name="profilEn" /> Student</label>
+              <label class="opt"><input type="radio" name="profilEn" /> Practising professional</label>
+              <label class="opt"><input type="radio" name="profilEn" /> Graduate seeking employment</label>
+              <label class="opt"><input type="radio" name="profilEn" /> Other</label>
+            </div>
+            <div class="survey-q"><span class="q-label">2. Field of study or practice</span><input type="text" /></div>
+            <div class="survey-q"><span class="q-label">3. Do you know the NBPAC?</span>
+              <label class="opt"><input type="radio" name="knowEn" /> Yes, well</label>
+              <label class="opt"><input type="radio" name="knowEn" /> A little</label>
+              <label class="opt"><input type="radio" name="knowEn" /> No, this is the first time</label>
+            </div>
+            <div class="survey-q"><span class="q-label">4. How interested are you in becoming a member?</span>
+              <label class="opt"><input type="radio" name="intEn" /> Very interested</label>
+              <label class="opt"><input type="radio" name="intEn" /> Interested</label>
+              <label class="opt"><input type="radio" name="intEn" /> Neutral</label>
+              <label class="opt"><input type="radio" name="intEn" /> Slightly interested</label>
+              <label class="opt"><input type="radio" name="intEn" /> Not interested</label>
+            </div>
+            <div class="survey-q"><span class="q-label">5. Which services would be most useful? (select all)</span>
+              <label class="opt"><input type="checkbox" /> Directory and professional recognition</label>
+              <label class="opt"><input type="checkbox" /> Accredited continuing education</label>
+              <label class="opt"><input type="checkbox" /> Code of ethics and oversight</label>
+              <label class="opt"><input type="checkbox" /> Networking and events</label>
+              <label class="opt"><input type="checkbox" /> Advocacy for the profession</label>
+              <label class="opt"><input type="checkbox" /> Title recognition</label>
+              <label class="opt"><input type="checkbox" /> Job postings</label>
+            </div>
+            <div class="survey-q"><span class="q-label">6. What annual dues would seem reasonable?</span>
+              <label class="opt"><input type="radio" name="duesEn" /> Under $50</label>
+              <label class="opt"><input type="radio" name="duesEn" /> $50 to $100</label>
+              <label class="opt"><input type="radio" name="duesEn" /> $100 to $150</label>
+              <label class="opt"><input type="radio" name="duesEn" /> Over $150</label>
+            </div>
+            <div class="survey-q"><span class="q-label">7. What training topics interest you?</span><textarea rows="2"></textarea></div>
+            <div class="survey-q"><span class="q-label">8. Preferred language of service</span>
+              <label class="opt"><input type="radio" name="langEn" /> French</label>
+              <label class="opt"><input type="radio" name="langEn" /> English</label>
+              <label class="opt"><input type="radio" name="langEn" /> Both</label>
+            </div>
+            <div class="survey-q"><span class="q-label">9. Comments</span><textarea rows="2"></textarea></div>
+            <div class="survey-q"><span class="q-label">10. To be kept informed (optional)</span>
+              <input type="text" placeholder="Name" style="margin-bottom:8px;" />
+              <input type="text" placeholder="Email" />
+            </div>
+            <button type="submit" class="btn btn-primary">Send my answers</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/a11y.js"></script>
+</body>
+</html>

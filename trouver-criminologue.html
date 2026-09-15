@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bottin des membres — APCNB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="subpage-hero">
+      <div class="container">
+        <a class="back-link" href="index.html" data-i18n="dir.back">← Accueil</a>
+        <p class="eyebrow" data-i18n="dir.kicker">Bottin des membres</p>
+        <h1 class="subpage-title" data-i18n="dir.title">Trouver un·e criminologue</h1>
+        <p class="subpage-lead" data-i18n="dir.intro">Vérifiez qu'une personne est membre en règle de l'APCNB et trouvez un·e professionnel·le selon la région, le domaine de pratique ou la langue de service.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:36px;">
+      <div class="container">
+        <p class="dir-disclaimer" data-i18n="dir.disclaimer">Démonstration : les membres affichés sont fictifs et servent à illustrer le fonctionnement du bottin.</p>
+
+        <form class="dir-filters" role="search" onsubmit="return false;">
+          <div class="dir-field dir-field-wide">
+            <label for="dir-search" data-i18n="dir.search">Recherche par nom ou ville</label>
+            <input id="dir-search" type="search" data-i18n="dir.searchPh" data-i18n-attr="placeholder" placeholder="Ex. : Tremblay, Moncton…" />
+          </div>
+          <div class="dir-field">
+            <label for="dir-region" data-i18n="dir.f.region">Région</label>
+            <select id="dir-region"></select>
+          </div>
+          <div class="dir-field">
+            <label for="dir-area" data-i18n="dir.f.area">Domaine de pratique</label>
+            <select id="dir-area"></select>
+          </div>
+          <div class="dir-field">
+            <label for="dir-lang" data-i18n="dir.f.lang">Langue de service</label>
+            <select id="dir-lang">
+              <option value="">—</option>
+              <option value="FR">Français</option>
+              <option value="EN">English</option>
+            </select>
+          </div>
+          <div class="dir-field">
+            <label for="dir-category" data-i18n="dir.f.category">Catégorie</label>
+            <select id="dir-category"></select>
+          </div>
+        </form>
+
+        <p class="dir-count" id="dir-count" aria-live="polite"></p>
+        <div class="dir-grid" id="dir-results"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/a11y.js"></script>
+  <script src="assets/js/directory.js"></script>
+</body>
+</html>

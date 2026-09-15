@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protection du public — APCNB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ===================== FRANÇAIS ===================== -->
+    <div data-lang-block="fr">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Accueil</a>
+          <p class="eyebrow">Protection du public</p>
+          <h1 class="subpage-title">Protéger le public</h1>
+          <p class="subpage-lead">L'APCNB encadre la pratique de la criminologie au Nouveau-Brunswick. Cette page vous explique comment vérifier l'appartenance d'un membre, porter une plainte ou signaler une pratique illégale.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="content-card">
+            <h2>Vérifier qu'une personne est membre</h2>
+            <p>Avant de retenir les services d'un·e criminologue, vous pouvez confirmer qu'il ou elle est membre en règle de l'APCNB grâce au bottin.</p>
+            <a class="btn btn-primary" href="trouver-criminologue.html">Consulter le bottin</a>
+          </div>
+
+          <div class="content-card">
+            <h2>Porter une plainte</h2>
+            <p>Toute personne peut porter plainte concernant la conduite professionnelle d'un membre. Le processus est confidentiel et équitable.</p>
+            <ol class="steps">
+              <li>Préparez une description écrite des faits, des dates et des personnes en cause.</li>
+              <li>Remplissez le formulaire ci-dessous ou écrivez au secrétariat.</li>
+              <li>Le secrétariat accuse réception dans les 10 jours ouvrables.</li>
+              <li>Le comité de déontologie évalue la recevabilité dans les 30 jours.</li>
+              <li>Une décision motivée vous est communiquée; un appel est possible.</li>
+            </ol>
+            <p style="margin-top:16px;">Pour les détails complets, consultez la
+              <a href="documents/traitement-plaintes-complaints-policy.html">Politique de traitement des plaintes</a>.</p>
+
+            <form class="form-card" style="margin-top:20px;" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; this.querySelectorAll('input,textarea').forEach(function(f){f.value='';});">
+              <div class="form-row-2">
+                <div class="field"><label>Votre nom</label><input type="text" required /></div>
+                <div class="field"><label>Votre courriel</label><input type="email" required /></div>
+              </div>
+              <div class="field"><label>Membre visé par la plainte</label><input type="text" /></div>
+              <div class="field"><label>Description des faits</label><textarea rows="4" required></textarea></div>
+              <button type="submit" class="btn btn-primary">Soumettre la plainte</button>
+              <p class="form-note" style="color:var(--ok);font-weight:600;margin:14px 0 0;" hidden>Merci. Démonstration : aucune donnée n'est transmise. Pour une plainte réelle, écrivez à info@apcnb.ca.</p>
+            </form>
+          </div>
+
+          <div class="content-card">
+            <h2>Signaler une fausse appartenance</h2>
+            <p>Le titre de « criminologue » n'est pas encore protégé par la loi au Nouveau-Brunswick; l'APCNB travaille à sa reconnaissance. Vous pouvez toutefois signaler une personne qui se présente faussement comme <strong>membre de l'APCNB</strong> ou qui utilise le nom de l'Association sans autorisation. Indiquez le nom, le lieu et le contexte, et joignez toute preuve (carte professionnelle, site web, publicité).</p>
+            <form class="form-card" style="margin-top:8px;" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; this.querySelectorAll('input,textarea').forEach(function(f){f.value='';});">
+              <div class="form-row-2">
+                <div class="field"><label>Personne ou organisation signalée</label><input type="text" required /></div>
+                <div class="field"><label>Lieu / ville</label><input type="text" /></div>
+              </div>
+              <div class="field"><label>Description du signalement</label><textarea rows="3" required></textarea></div>
+              <button type="submit" class="btn btn-ghost">Envoyer le signalement</button>
+              <p class="form-note" style="color:var(--ok);font-weight:600;margin:14px 0 0;" hidden>Merci. Démonstration : aucune donnée n'est transmise.</p>
+            </form>
+          </div>
+
+          <div class="content-card">
+            <h2>Décisions disciplinaires</h2>
+            <p>Par souci de transparence, les décisions disciplinaires rendues à l'égard des membres sont publiées ici.</p>
+            <table class="reg-table">
+              <thead><tr><th>Date</th><th>Membre</th><th>Décision</th></tr></thead>
+              <tbody><tr class="empty-row"><td colspan="3">Aucune décision à ce jour.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div data-lang-block="en">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Home</a>
+          <p class="eyebrow">Public protection</p>
+          <h1 class="subpage-title">Protecting the public</h1>
+          <p class="subpage-lead">The NBPAC oversees the practice of criminology in New Brunswick. This page explains how to confirm a member's standing, file a complaint or report illegal practice.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="content-card">
+            <h2>Confirm that someone is a member</h2>
+            <p>Before engaging a criminologist's services, you can confirm they are a member in good standing of the NBPAC using the directory.</p>
+            <a class="btn btn-primary" href="trouver-criminologue.html">Browse the directory</a>
+          </div>
+
+          <div class="content-card">
+            <h2>File a complaint</h2>
+            <p>Anyone may file a complaint about a member's professional conduct. The process is confidential and fair.</p>
+            <ol class="steps">
+              <li>Prepare a written description of the facts, dates and people involved.</li>
+              <li>Complete the form below or write to the secretariat.</li>
+              <li>The secretariat acknowledges receipt within 10 business days.</li>
+              <li>The ethics committee assesses admissibility within 30 days.</li>
+              <li>A reasoned decision is communicated to you; an appeal is possible.</li>
+            </ol>
+            <p style="margin-top:16px;">For full details, see the
+              <a href="documents/traitement-plaintes-complaints-policy.html">Complaints-Handling Policy</a>.</p>
+
+            <form class="form-card" style="margin-top:20px;" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; this.querySelectorAll('input,textarea').forEach(function(f){f.value='';});">
+              <div class="form-row-2">
+                <div class="field"><label>Your name</label><input type="text" required /></div>
+                <div class="field"><label>Your email</label><input type="email" required /></div>
+              </div>
+              <div class="field"><label>Member concerned</label><input type="text" /></div>
+              <div class="field"><label>Description of the facts</label><textarea rows="4" required></textarea></div>
+              <button type="submit" class="btn btn-primary">Submit the complaint</button>
+              <p class="form-note" style="color:var(--ok);font-weight:600;margin:14px 0 0;" hidden>Thank you. Demonstration: no data is transmitted. For a real complaint, write to info@apcnb.ca.</p>
+            </form>
+          </div>
+
+          <div class="content-card">
+            <h2>Report false membership</h2>
+            <p>The "criminologist" title is not yet protected by law in New Brunswick; the NBPAC is working toward its recognition. You can, however, report a person who falsely presents themselves as an <strong>NBPAC member</strong> or who uses the Association's name without authorization. Provide the name, location and context, and attach any evidence (business card, website, advertisement).</p>
+            <form class="form-card" style="margin-top:8px;" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; this.querySelectorAll('input,textarea').forEach(function(f){f.value='';});">
+              <div class="form-row-2">
+                <div class="field"><label>Person or organization reported</label><input type="text" required /></div>
+                <div class="field"><label>Location / city</label><input type="text" /></div>
+              </div>
+              <div class="field"><label>Description of the report</label><textarea rows="3" required></textarea></div>
+              <button type="submit" class="btn btn-ghost">Send the report</button>
+              <p class="form-note" style="color:var(--ok);font-weight:600;margin:14px 0 0;" hidden>Thank you. Demonstration: no data is transmitted.</p>
+            </form>
+          </div>
+
+          <div class="content-card">
+            <h2>Disciplinary decisions</h2>
+            <p>In the interest of transparency, disciplinary decisions issued against members are published here.</p>
+            <table class="reg-table">
+              <thead><tr><th>Date</th><th>Member</th><th>Decision</th></tr></thead>
+              <tbody><tr class="empty-row"><td colspan="3">No decisions to date.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/a11y.js"></script>
+</body>
+</html>

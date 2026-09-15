@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire d'adhésion — APCNB</title>
+  <meta data-title-fr="Formulaire d'adhésion — APCNB" data-title-en="Membership Form — NBPAC" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/document.css" />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="doc-header">
+    <div class="doc-header-inner">
+      <a class="doc-back" href="../index.html#documents">← <span data-lang-block="fr">Retour</span><span data-lang-block="en">Back</span></a>
+      <span class="doc-brand">APCNB · NBPAC</span>
+      <div class="doc-lang" role="group" aria-label="Language / Langue">
+        <button type="button" class="lang-btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FRANÇAIS -->
+  <article data-lang-block="fr">
+    <div class="doc-wrap">
+      <div class="doc-titlebar">
+        <p class="doc-kicker">Formulaire officiel</p>
+        <h1>Demande d'adhésion</h1>
+      </div>
+      <p class="lead">Veuillez remplir le présent formulaire. Vous pouvez l'imprimer ou l'enregistrer en PDF (Fichier → Imprimer → Enregistrer en PDF).</p>
+
+      <form onsubmit="event.preventDefault(); alert('Formulaire de démonstration — aucune donnée n\'est transmise. Imprimez ou enregistrez en PDF pour le soumettre.');">
+        <h2>1. Catégorie demandée</h2>
+        <div class="form-field">
+          <label for="cat-fr">Catégorie de membre</label>
+          <select id="cat-fr" name="categorie" required>
+            <option value="">— Choisir —</option>
+            <option>Membre régulier (125 $)</option>
+            <option>Membre étudiant (gratuit)</option>
+            <option>Membre associé (90 $)</option>
+          </select>
+        </div>
+
+        <h2>2. Renseignements personnels</h2>
+        <div class="form-row">
+          <div class="form-field"><label for="prenom-fr">Prénom</label><input id="prenom-fr" type="text" required /></div>
+          <div class="form-field"><label for="nom-fr">Nom</label><input id="nom-fr" type="text" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-field"><label for="courriel-fr">Courriel</label><input id="courriel-fr" type="email" required /></div>
+          <div class="form-field"><label for="tel-fr">Téléphone</label><input id="tel-fr" type="tel" /></div>
+        </div>
+        <div class="form-field"><label for="adresse-fr">Adresse postale</label><input id="adresse-fr" type="text" /></div>
+        <div class="form-field">
+          <label for="langue-fr">Langue officielle de correspondance</label>
+          <select id="langue-fr"><option>Français</option><option>Anglais</option></select>
+        </div>
+
+        <h2>3. Formation et expérience</h2>
+        <div class="form-field"><label for="diplome-fr">Diplôme(s) et établissement</label><input id="diplome-fr" type="text" /></div>
+        <div class="form-field"><label for="emploi-fr">Emploi ou fonction actuelle</label><input id="emploi-fr" type="text" /></div>
+
+        <h2>4. Engagement</h2>
+        <div class="check-row"><input type="checkbox" id="eng1-fr" required /><label for="eng1-fr">Je m'engage à respecter le Code de déontologie et les statuts de l'APCNB.</label></div>
+        <div class="check-row"><input type="checkbox" id="eng2-fr" required /><label for="eng2-fr">J'atteste que les renseignements fournis sont exacts.</label></div>
+        <div class="check-row"><input type="checkbox" id="eng3-fr" required /><label for="eng3-fr">Je consens au traitement de mes renseignements selon la Politique de confidentialité.</label></div>
+
+        <div class="sign-line">Signature : _____________________________  &nbsp; Date : ______________</div>
+
+        <p style="margin-top:28px;"><button class="btn" type="submit">Soumettre la demande</button></p>
+      </form>
+    </div>
+  </article>
+
+  <!-- ENGLISH -->
+  <article data-lang-block="en">
+    <div class="doc-wrap">
+      <div class="doc-titlebar">
+        <p class="doc-kicker">Official form</p>
+        <h1>Membership Application</h1>
+      </div>
+      <p class="lead">Please complete this form. You may print it or save it as a PDF (File → Print → Save as PDF).</p>
+
+      <form onsubmit="event.preventDefault(); alert('Demonstration form — no data is transmitted. Print or save as PDF to submit.');">
+        <h2>1. Category Requested</h2>
+        <div class="form-field">
+          <label for="cat-en">Membership category</label>
+          <select id="cat-en" name="category" required>
+            <option value="">— Select —</option>
+            <option>Regular member ($125)</option>
+            <option>Student member (free)</option>
+            <option>Associate member ($90)</option>
+          </select>
+        </div>
+
+        <h2>2. Personal Information</h2>
+        <div class="form-row">
+          <div class="form-field"><label for="first-en">First name</label><input id="first-en" type="text" required /></div>
+          <div class="form-field"><label for="last-en">Last name</label><input id="last-en" type="text" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-field"><label for="email-en">Email</label><input id="email-en" type="email" required /></div>
+          <div class="form-field"><label for="phone-en">Telephone</label><input id="phone-en" type="tel" /></div>
+        </div>
+        <div class="form-field"><label for="addr-en">Mailing address</label><input id="addr-en" type="text" /></div>
+        <div class="form-field">
+          <label for="lang-en">Official language of correspondence</label>
+          <select id="lang-en"><option>English</option><option>French</option></select>
+        </div>
+
+        <h2>3. Education and Experience</h2>
+        <div class="form-field"><label for="degree-en">Degree(s) and institution</label><input id="degree-en" type="text" /></div>
+        <div class="form-field"><label for="job-en">Current employment or role</label><input id="job-en" type="text" /></div>
+
+        <h2>4. Undertaking</h2>
+        <div class="check-row"><input type="checkbox" id="eng1-en" required /><label for="eng1-en">I undertake to abide by the NBPAC Code of Ethics and bylaws.</label></div>
+        <div class="check-row"><input type="checkbox" id="eng2-en" required /><label for="eng2-en">I confirm that the information provided is accurate.</label></div>
+        <div class="check-row"><input type="checkbox" id="eng3-en" required /><label for="eng3-en">I consent to the processing of my information under the Privacy Policy.</label></div>
+
+        <div class="sign-line">Signature: _____________________________  &nbsp; Date: ______________</div>
+
+        <p style="margin-top:28px;"><button class="btn" type="submit">Submit application</button></p>
+      </form>
+    </div>
+  </article>
+
+  <footer class="doc-footer">
+    <span data-lang-block="fr">© 2026 APCNB · Formulaire officiel · Offert en français et en anglais</span>
+    <span data-lang-block="en">© 2026 NBPAC · Official form · Available in French and English</span>
+  </footer>
+
+  <script src="../assets/js/document.js"></script>
+</body>
+</html>

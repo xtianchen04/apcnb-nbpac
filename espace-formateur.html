@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espace formateur — APCNB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- FRANÇAIS -->
+    <div data-lang-block="fr">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="formation.html">← Formation</a>
+          <p class="eyebrow">Espace formateur</p>
+          <h1 class="subpage-title">Votre tableau de bord formateur</h1>
+          <p class="subpage-lead">Proposez des formations, suivez vos accréditations et émettez les certificats de réussite. (Maquette de démonstration : toute connexion fonctionne.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="portal-login" data-stage="login">
+            <div class="portal-card">
+              <h2>Connexion formateur</h2>
+              <form class="form-card portal-form" onsubmit="event.preventDefault(); APCNB_login();">
+                <div class="field"><label>Courriel</label><input type="email" required /></div>
+                <div class="field"><label>Mot de passe</label><input type="password" required /></div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Se connecter</button>
+                <p style="margin:14px 0 0;font-size:.85rem;color:var(--muted);">Démonstration — aucune authentification réelle.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="portal-dash" data-stage="dash" hidden>
+            <div class="dash-banner">
+              <strong>Bonjour, Dr Alexandre Roy</strong>
+              <span class="pill">Formateur accrédité · 2026-2027</span>
+              <a href="#" onclick="event.preventDefault(); APCNB_logout();" style="margin-left:auto;color:#fff;font-weight:600;">Déconnexion</a>
+            </div>
+            <div class="dash-grid">
+              <div class="dash-tile"><div class="ico">➕</div><h3>Proposer une formation</h3><p>Soumettez une nouvelle formation à l'accréditation du comité.</p></div>
+              <div class="dash-tile"><div class="ico">📚</div><h3>Mes formations accréditées</h3><p>2 formations actives · prochaine échéance : 2029.</p></div>
+              <div class="dash-tile"><div class="ico">◎</div><h3>Accréditation et UFC</h3><p>Consultez les critères et le nombre d'UFC attribuées.</p></div>
+              <div class="dash-tile"><div class="ico">🧰</div><h3>Ressources pédagogiques</h3><p>Gabarits, normes de qualité et guide du formateur.</p></div>
+              <div class="dash-tile"><div class="ico">🎓</div><h3>Certificats à émettre</h3><p>Générez les certificats de réussite pour vos participants.</p></div>
+              <div class="dash-tile"><div class="ico">💲</div><h3>Ententes et paiements</h3><p>Protocole d'entente, annexe financière et suivi des paiements.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ENGLISH -->
+    <div data-lang-block="en">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="formation.html">← Training</a>
+          <p class="eyebrow">Instructor portal</p>
+          <h1 class="subpage-title">Your instructor dashboard</h1>
+          <p class="subpage-lead">Propose training, track your accreditations and issue completion certificates. (Demonstration mockup: any login works.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="portal-login" data-stage="login">
+            <div class="portal-card">
+              <h2>Instructor sign in</h2>
+              <form class="form-card portal-form" onsubmit="event.preventDefault(); APCNB_login();">
+                <div class="field"><label>Email</label><input type="email" required /></div>
+                <div class="field"><label>Password</label><input type="password" required /></div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Sign in</button>
+                <p style="margin:14px 0 0;font-size:.85rem;color:var(--muted);">Demonstration — no real authentication.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="portal-dash" data-stage="dash" hidden>
+            <div class="dash-banner">
+              <strong>Hello, Dr. Alexandre Roy</strong>
+              <span class="pill">Accredited instructor · 2026-2027</span>
+              <a href="#" onclick="event.preventDefault(); APCNB_logout();" style="margin-left:auto;color:#fff;font-weight:600;">Sign out</a>
+            </div>
+            <div class="dash-grid">
+              <div class="dash-tile"><div class="ico">➕</div><h3>Propose a course</h3><p>Submit a new course for the committee's accreditation.</p></div>
+              <div class="dash-tile"><div class="ico">📚</div><h3>My accredited courses</h3><p>2 active courses · next expiry: 2029.</p></div>
+              <div class="dash-tile"><div class="ico">◎</div><h3>Accreditation and CEUs</h3><p>Review the criteria and the CEUs awarded.</p></div>
+              <div class="dash-tile"><div class="ico">🧰</div><h3>Teaching resources</h3><p>Templates, quality standards and the instructor guide.</p></div>
+              <div class="dash-tile"><div class="ico">🎓</div><h3>Certificates to issue</h3><p>Generate completion certificates for your participants.</p></div>
+              <div class="dash-tile"><div class="ico">💲</div><h3>Agreements and payments</h3><p>MOU, financial appendix and payment tracking.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script>
+    function APCNB_login(){ document.querySelectorAll('[data-stage="login"]').forEach(function(e){e.hidden=true;}); document.querySelectorAll('[data-stage="dash"]').forEach(function(e){e.hidden=false;}); window.scrollTo({top:0,behavior:'smooth'}); }
+    function APCNB_logout(){ document.querySelectorAll('[data-stage="dash"]').forEach(function(e){e.hidden=true;}); document.querySelectorAll('[data-stage="login"]').forEach(function(e){e.hidden=false;}); }
+  </script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/a11y.js"></script>
+</body>
+</html>

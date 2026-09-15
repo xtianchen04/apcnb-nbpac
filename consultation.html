@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultation — APCNB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- FRANÇAIS -->
+    <div data-lang-block="fr">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Accueil</a>
+          <p class="eyebrow">Consultation</p>
+          <h1 class="subpage-title">Consultation sur les orientations de l'APCNB</h1>
+          <p class="subpage-lead">Aidez-nous à façonner l'association dès le départ. Nous consultons sur la définition du criminologue, les exigences annuelles et les formations accréditées. (5 minutes · confidentiel · démonstration.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container" style="max-width:780px;">
+          <form class="content-card" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; window.scrollTo({top:0,behavior:'smooth'});">
+            <p class="form-note" style="color:var(--ok);font-weight:600;background:rgba(47,111,79,.1);padding:12px 16px;border-radius:9px;margin:0 0 18px;" hidden>Merci de votre contribution! Démonstration : aucune donnée n'est transmise.</p>
+
+            <h2 style="color:var(--navy);margin:0 0 6px;">A. La définition du criminologue</h2>
+            <p style="color:var(--muted);font-size:.95rem;margin:0 0 14px;">Plusieurs conceptions du criminologue existent. Laquelle correspond le mieux à votre vision? Vous pouvez aussi proposer la vôtre.</p>
+            <div class="survey-q"><span class="q-label">1. Selon vous, le criminologue devrait surtout être défini par :</span>
+              <label class="opt"><input type="radio" name="def" /> <span><strong>a)</strong> Le crime et la justice, approche <strong>non clinique</strong> (prévention, évaluation du risque, réinsertion, recherche; sans diagnostic ni psychothérapie).</span></label>
+              <label class="opt"><input type="radio" name="def" /> <span><strong>b)</strong> Une approche plus large incluant l'<strong>évaluation psychosociale ou clinique</strong> (comme au Québec).</span></label>
+              <label class="opt"><input type="radio" name="def" /> <span><strong>c)</strong> La <strong>recherche, l'analyse et les politiques</strong> de justice.</span></label>
+              <label class="opt"><input type="radio" name="def" /> <span><strong>d)</strong> L'<strong>intervention de terrain</strong> auprès des personnes contrevenantes et victimes (réinsertion, prévention, médiation).</span></label>
+              <label class="opt"><input type="radio" name="def" /> Autre :</label>
+              <input type="text" placeholder="Précisez votre propre définition" />
+            </div>
+            <div class="survey-q"><span class="q-label">2. Selon vous, cette définition est :</span>
+              <label class="opt"><input type="radio" name="portee" /> Trop étroite</label>
+              <label class="opt"><input type="radio" name="portee" /> Juste</label>
+              <label class="opt"><input type="radio" name="portee" /> Trop large</label>
+            </div>
+            <div class="survey-q"><span class="q-label">3. Commentaires ou ajouts à la définition</span><textarea rows="2"></textarea></div>
+
+            <h2 style="color:var(--navy);margin:24px 0 6px;">B. Les exigences annuelles</h2>
+            <p style="color:var(--muted);font-size:.95rem;margin:0 0 14px;">Nous proposons <strong>20 unités de formation continue (UFC) par année</strong>, dont au moins 3 en éthique.</p>
+            <div class="survey-q"><span class="q-label">4. L'exigence de 20 UFC vous semble :</span>
+              <label class="opt"><input type="radio" name="ufc" /> Trop élevée</label>
+              <label class="opt"><input type="radio" name="ufc" /> Raisonnable</label>
+              <label class="opt"><input type="radio" name="ufc" /> Trop faible</label>
+            </div>
+            <div class="survey-q"><span class="q-label">5. Faudrait-il une période de transition ou des exigences réduites au démarrage?</span>
+              <label class="opt"><input type="radio" name="transition" /> Oui</label>
+              <label class="opt"><input type="radio" name="transition" /> Non</label>
+              <label class="opt"><input type="radio" name="transition" /> Incertain·e</label>
+            </div>
+            <div class="survey-q"><span class="q-label">6. Des exemptions devraient-elles être prévues? (plusieurs choix)</span>
+              <label class="opt"><input type="checkbox" /> Étudiants</label>
+              <label class="opt"><input type="checkbox" /> Personnes retraitées</label>
+              <label class="opt"><input type="checkbox" /> Congé parental ou maladie</label>
+              <label class="opt"><input type="checkbox" /> Nouveaux diplômés</label>
+            </div>
+            <div class="survey-q"><span class="q-label">7. Commentaires</span><textarea rows="2"></textarea></div>
+
+            <h2 style="color:var(--navy);margin:24px 0 6px;">C. Les formations accréditées</h2>
+            <div class="survey-q"><span class="q-label">8. Quels formats préférez-vous?</span>
+              <label class="opt"><input type="radio" name="format" /> Synchrone (en direct)</label>
+              <label class="opt"><input type="radio" name="format" /> Asynchrone (à votre rythme)</label>
+              <label class="opt"><input type="radio" name="format" /> Les deux</label>
+            </div>
+            <div class="survey-q"><span class="q-label">9. Quels sujets prioritaires? (plusieurs choix)</span>
+              <label class="opt"><input type="checkbox" /> Éthique</label>
+              <label class="opt"><input type="checkbox" /> Évaluation du risque</label>
+              <label class="opt"><input type="checkbox" /> Victimologie</label>
+              <label class="opt"><input type="checkbox" /> Justice réparatrice</label>
+              <label class="opt"><input type="checkbox" /> Réinsertion sociale</label>
+              <label class="opt"><input type="checkbox" /> Recherche et données</label>
+            </div>
+            <div class="survey-q"><span class="q-label">10. Qui devrait pouvoir donner des formations accréditées?</span>
+              <label class="opt"><input type="radio" name="formateur" /> Professeurs universitaires</label>
+              <label class="opt"><input type="radio" name="formateur" /> Professionnels du milieu</label>
+              <label class="opt"><input type="radio" name="formateur" /> Les deux</label>
+            </div>
+            <div class="survey-q"><span class="q-label">11. Quel coût par formation serait acceptable?</span>
+              <label class="opt"><input type="radio" name="cout" /> Gratuit pour les membres</label>
+              <label class="opt"><input type="radio" name="cout" /> Moins de 50 $</label>
+              <label class="opt"><input type="radio" name="cout" /> 50 $ à 100 $</label>
+              <label class="opt"><input type="radio" name="cout" /> Plus de 100 $</label>
+            </div>
+            <div class="survey-q"><span class="q-label">12. Commentaires</span><textarea rows="2"></textarea></div>
+
+            <h2 style="color:var(--navy);margin:24px 0 6px;">D. Inclusion et démarrage</h2>
+            <div class="survey-q"><span class="q-label">13. Comment rendre l'APCNB plus inclusive dès le départ? (plusieurs choix)</span>
+              <label class="opt"><input type="checkbox" /> Cotisation réduite au démarrage</label>
+              <label class="opt"><input type="checkbox" /> Reconnaissance de l'expérience (équivalences)</label>
+              <label class="opt"><input type="checkbox" /> Accueil renforcé des étudiants</label>
+              <label class="opt"><input type="checkbox" /> Services pleinement bilingues</label>
+              <label class="opt"><input type="checkbox" /> Représentation régionale équilibrée</label>
+            </div>
+            <div class="survey-q"><span class="q-label">14. Autres commentaires</span><textarea rows="2"></textarea></div>
+            <div class="survey-q"><span class="q-label">Pour vous joindre (facultatif)</span>
+              <input type="text" placeholder="Nom" style="margin-bottom:8px;" />
+              <input type="text" placeholder="Courriel" />
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer mes réponses</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- ENGLISH -->
+    <div data-lang-block="en">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Home</a>
+          <p class="eyebrow">Consultation</p>
+          <h1 class="subpage-title">Consultation on the NBPAC's directions</h1>
+          <p class="subpage-lead">Help us shape the association from the start. We are consulting on the definition of the criminologist, the annual requirements and accredited training. (5 minutes · confidential · demonstration.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container" style="max-width:780px;">
+          <form class="content-card" onsubmit="event.preventDefault(); this.querySelector('.form-note').hidden=false; window.scrollTo({top:0,behavior:'smooth'});">
+            <p class="form-note" style="color:var(--ok);font-weight:600;background:rgba(47,111,79,.1);padding:12px 16px;border-radius:9px;margin:0 0 18px;" hidden>Thank you for your input! Demonstration: no data is transmitted.</p>
+
+            <h2 style="color:var(--navy);margin:0 0 6px;">A. The definition of the criminologist</h2>
+            <p style="color:var(--muted);font-size:.95rem;margin:0 0 14px;">Several conceptions of the criminologist exist. Which one best matches your view? You may also propose your own.</p>
+            <div class="survey-q"><span class="q-label">1. In your view, the criminologist should mainly be defined by:</span>
+              <label class="opt"><input type="radio" name="defEn" /> <span><strong>a)</strong> Crime and justice, a <strong>non-clinical</strong> approach (prevention, risk assessment, reintegration, research; no diagnosis or psychotherapy).</span></label>
+              <label class="opt"><input type="radio" name="defEn" /> <span><strong>b)</strong> A broader approach including <strong>psychosocial or clinical assessment</strong> (as in Quebec).</span></label>
+              <label class="opt"><input type="radio" name="defEn" /> <span><strong>c)</strong> <strong>Research, analysis and justice policy</strong>.</span></label>
+              <label class="opt"><input type="radio" name="defEn" /> <span><strong>d)</strong> <strong>Field intervention</strong> with offenders and victims (reintegration, prevention, mediation).</span></label>
+              <label class="opt"><input type="radio" name="defEn" /> Other:</label>
+              <input type="text" placeholder="Specify your own definition" />
+            </div>
+            <div class="survey-q"><span class="q-label">2. In your view, this definition is:</span>
+              <label class="opt"><input type="radio" name="scopeEn" /> Too narrow</label>
+              <label class="opt"><input type="radio" name="scopeEn" /> Just right</label>
+              <label class="opt"><input type="radio" name="scopeEn" /> Too broad</label>
+            </div>
+            <div class="survey-q"><span class="q-label">3. Comments or additions to the definition</span><textarea rows="2"></textarea></div>
+
+            <h2 style="color:var(--navy);margin:24px 0 6px;">B. The annual requirements</h2>
+            <p style="color:var(--muted);font-size:.95rem;margin:0 0 14px;">We propose <strong>20 continuing-education units (CEUs) per year</strong>, including at least 3 in ethics.</p>
+            <div class="survey-q"><span class="q-label">4. The 20-CEU requirement seems:</span>
+              <label class="opt"><input type="radio" name="ceuEn" /> Too high</label>
+              <label class="opt"><input type="radio" name="ceuEn" /> Reasonable</label>
+              <label class="opt"><input type="radio" name="ceuEn" /> Too low</label>
+            </div>
+            <div class="survey-q"><span class="q-label">5. Should there be a transition period or reduced requirements at launch?</span>
+              <label class="opt"><input type="radio" name="transEn" /> Yes</label>
+              <label class="opt"><input type="radio" name="transEn" /> No</label>
+              <label class="opt"><input type="radio" name="transEn" /> Unsure</label>
+            </div>
+            <div class="survey-q"><span class="q-label">6. Should exemptions be provided? (select all)</span>
+              <label class="opt"><input type="checkbox" /> Students</label>
+              <label class="opt"><input type="checkbox" /> Retired persons</label>
+              <label class="opt"><input type="checkbox" /> Parental leave or illness</label>
+              <label class="opt"><input type="checkbox" /> New graduates</label>
+            </div>
+            <div class="survey-q"><span class="q-label">7. Comments</span><textarea rows="2"></textarea></div>
+
+            <h2 style="color:var(--navy);margin:24px 0 6px;">C. Accredited training</h2>
+            <div class="survey-q"><span class="q-label">8. Which formats do you prefer?</span>
+              <label class="opt"><input type="radio" name="fmtEn" /> Synchronous (live)</label>
+              <label class="opt"><input type="radio" name="fmtEn" /> Asynchronous (self-paced)</label>
+              <label class="opt"><input type="radio" name="fmtEn" /> Both</label>
+            </div>
+            <div class="survey-q"><span class="q-label">9. Which topics are priorities? (select all)</span>
+              <label class="opt"><input type="checkbox" /> Ethics</label>
+              <label class="opt"><input type="checkbox" /> Risk assessment</label>
+              <label class="opt"><input type="checkbox" /> Victimology</label>
+              <label class="opt"><input type="checkbox" /> Restorative justice</label>
+              <label class="opt"><input type="checkbox" /> Social reintegration</label>
+              <label class="opt"><input type="checkbox" /> Research and data</label>
+            </div>
+            <div class="survey-q"><span class="q-label">10. Who should be able to deliver accredited training?</span>
+              <label class="opt"><input type="radio" name="instrEn" /> University professors</label>
+              <label class="opt"><input type="radio" name="instrEn" /> Field professionals</label>
+              <label class="opt"><input type="radio" name="instrEn" /> Both</label>
+            </div>
+            <div class="survey-q"><span class="q-label">11. What cost per course would be acceptable?</span>
+              <label class="opt"><input type="radio" name="costEn" /> Free for members</label>
+              <label class="opt"><input type="radio" name="costEn" /> Under $50</label>
+              <label class="opt"><input type="radio" name="costEn" /> $50 to $100</label>
+              <label class="opt"><input type="radio" name="costEn" /> Over $100</label>
+            </div>
+            <div class="survey-q"><span class="q-label">12. Comments</span><textarea rows="2"></textarea></div>
+
+            <h2 style="color:var(--navy);margin:24px 0 6px;">D. Inclusion and launch</h2>
+            <div class="survey-q"><span class="q-label">13. How can the NBPAC be more inclusive from the start? (select all)</span>
+              <label class="opt"><input type="checkbox" /> Reduced dues at launch</label>
+              <label class="opt"><input type="checkbox" /> Recognition of experience (equivalencies)</label>
+              <label class="opt"><input type="checkbox" /> Stronger support for students</label>
+              <label class="opt"><input type="checkbox" /> Fully bilingual services</label>
+              <label class="opt"><input type="checkbox" /> Balanced regional representation</label>
+            </div>
+            <div class="survey-q"><span class="q-label">14. Other comments</span><textarea rows="2"></textarea></div>
+            <div class="survey-q"><span class="q-label">To contact you (optional)</span>
+              <input type="text" placeholder="Name" style="margin-bottom:8px;" />
+              <input type="text" placeholder="Email" />
+            </div>
+            <button type="submit" class="btn btn-primary">Send my answers</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/a11y.js"></script>
+</body>
+</html>

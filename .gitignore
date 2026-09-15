@@ -1,0 +1,15 @@
+# Dépendances (servent uniquement à générer les documents, pas au site en ligne)
+node_modules/
+
+# Vercel
+.vercel/
+
+# Copie en double du paquet de documents — non utilisée par le site
+# (le site sert les fichiers depuis telechargements/)
+/Documents-APCNB-Word-PDF/
+/Documents-APCNB-Word-PDF.zip
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini

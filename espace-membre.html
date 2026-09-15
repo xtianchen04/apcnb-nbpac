@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espace membre — APCNB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- FRANÇAIS -->
+    <div data-lang-block="fr">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Accueil</a>
+          <p class="eyebrow">Espace membre</p>
+          <h1 class="subpage-title">Votre dossier</h1>
+          <p class="subpage-lead">Renouvelez votre adhésion, consultez vos reçus et suivez votre formation continue. (Maquette de démonstration : toute connexion fonctionne.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="portal-login" data-stage="login">
+            <div class="portal-card">
+              <h2>Connexion</h2>
+              <form class="form-card portal-form" onsubmit="event.preventDefault(); APCNB_login();">
+                <div class="field"><label>Numéro de membre ou courriel</label><input type="text" required /></div>
+                <div class="field"><label>Mot de passe</label><input type="password" required /></div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Se connecter</button>
+                <p style="margin:14px 0 0;font-size:.85rem;color:var(--muted);">Démonstration — aucune authentification réelle.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="portal-dash" data-stage="dash" hidden>
+            <div class="dash-banner">
+              <strong>Bonjour, Marie-Claude</strong>
+              <span class="pill">Membre régulier · en règle 2026-2027</span>
+              <a href="#" onclick="event.preventDefault(); APCNB_logout();" style="margin-left:auto;color:#fff;font-weight:600;">Déconnexion</a>
+            </div>
+            <div class="dash-grid">
+              <div class="dash-tile"><div class="ico">🔄</div><h3>Renouvellement</h3><p>Votre cotisation expire le 31 mars 2027. Renouveler en un clic.</p></div>
+              <div class="dash-tile"><div class="ico">📄</div><h3>Mon dossier</h3><p>Coordonnées, diplômes et préférence linguistique : français.</p></div>
+              <div class="dash-tile"><div class="ico">🧾</div><h3>Reçus de cotisation</h3><p>Téléchargez vos reçus officiels des années passées.</p></div>
+              <div class="dash-tile"><div class="ico">🎓</div><h3>Formation continue</h3><p>14 / 20 UFC cumulées pour le cycle en cours.</p></div>
+              <div class="dash-tile"><div class="ico">🎖</div><h3>Certificat de membre</h3><p>Imprimez votre certificat attestant votre adhésion.</p></div>
+              <div class="dash-tile"><div class="ico">✉</div><h3>Communications</h3><p>Gérez vos abonnements aux infolettres de l'Association.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ENGLISH -->
+    <div data-lang-block="en">
+      <section class="subpage-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">← Home</a>
+          <p class="eyebrow">Member portal</p>
+          <h1 class="subpage-title">Your file</h1>
+          <p class="subpage-lead">Renew your membership, view your receipts and track your continuing education. (Demonstration mockup: any login works.)</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="portal-login" data-stage="login">
+            <div class="portal-card">
+              <h2>Sign in</h2>
+              <form class="form-card portal-form" onsubmit="event.preventDefault(); APCNB_login();">
+                <div class="field"><label>Membership number or email</label><input type="text" required /></div>
+                <div class="field"><label>Password</label><input type="password" required /></div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Sign in</button>
+                <p style="margin:14px 0 0;font-size:.85rem;color:var(--muted);">Demonstration — no real authentication.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="portal-dash" data-stage="dash" hidden>
+            <div class="dash-banner">
+              <strong>Hello, Marie-Claude</strong>
+              <span class="pill">Regular member · in good standing 2026-2027</span>
+              <a href="#" onclick="event.preventDefault(); APCNB_logout();" style="margin-left:auto;color:#fff;font-weight:600;">Sign out</a>
+            </div>
+            <div class="dash-grid">
+              <div class="dash-tile"><div class="ico">🔄</div><h3>Renewal</h3><p>Your dues expire on March 31, 2027. Renew in one click.</p></div>
+              <div class="dash-tile"><div class="ico">📄</div><h3>My file</h3><p>Contact details, credentials and language preference: English.</p></div>
+              <div class="dash-tile"><div class="ico">🧾</div><h3>Dues receipts</h3><p>Download your official receipts from past years.</p></div>
+              <div class="dash-tile"><div class="ico">🎓</div><h3>Continuing education</h3><p>14 / 20 CEUs earned for the current cycle.</p></div>
+              <div class="dash-tile"><div class="ico">🎖</div><h3>Membership certificate</h3><p>Print your certificate attesting your membership.</p></div>
+              <div class="dash-tile"><div class="ico">✉</div><h3>Communications</h3><p>Manage your subscriptions to the Association's newsletters.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script>
+    function APCNB_login(){ document.querySelectorAll('[data-stage="login"]').forEach(function(e){e.hidden=true;}); document.querySelectorAll('[data-stage="dash"]').forEach(function(e){e.hidden=false;}); window.scrollTo({top:0,behavior:'smooth'}); }
+    function APCNB_logout(){ document.querySelectorAll('[data-stage="dash"]').forEach(function(e){e.hidden=true;}); document.querySelectorAll('[data-stage="login"]').forEach(function(e){e.hidden=false;}); }
+  </script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/a11y.js"></script>
+</body>
+</html>
