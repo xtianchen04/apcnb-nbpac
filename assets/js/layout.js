@@ -62,7 +62,7 @@
           '<a class="brand" href="index.html" aria-label="APCNB">' +
             '<span class="brand-mark" aria-hidden="true"><img src="assets/img/logo.svg" width="46" height="46" alt="" /></span>' +
             '<span class="brand-text">' +
-              '<strong class="brand-acronym">APCNB</strong>' +
+              '<strong class="brand-acronym" data-i18n="brand.acronym">APCNB</strong>' +
               '<span class="brand-full" data-i18n="brand.full">Association professionnelle de criminologie du Nouveau-Brunswick</span>' +
             "</span>" +
           "</a>" +

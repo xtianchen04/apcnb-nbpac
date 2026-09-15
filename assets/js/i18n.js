@@ -10,6 +10,7 @@ window.APCNB_TRANSLATIONS = {
     "meta.description": "Association professionnelle de criminologie du Nouveau-Brunswick — promotion de l'excellence, de l'éthique et de la reconnaissance professionnelle en criminologie.",
     "a11y.skip": "Aller au contenu principal",
 
+    "brand.acronym": "APCNB",
     "brand.full": "Association professionnelle de criminologie du Nouveau-Brunswick",
 
     "nav.menu": "Menu",
@@ -48,7 +49,7 @@ window.APCNB_TRANSLATIONS = {
     "hero.stat1.label": "Langues officielles",
     "hero.stat2.label": "Fondée",
     "hero.stat3.label": "Champ d'action",
-    "hero.stat3.value": "Province du N.-B.",
+    "hero.stat3.value": "N.-B.",
 
     "mission.eyebrow": "Notre raison d'être",
     "mission.title": "Mission, vision et valeurs",
@@ -210,6 +211,7 @@ window.APCNB_TRANSLATIONS = {
     "meta.description": "New Brunswick Professional Association of Criminology — advancing excellence, ethics and professional recognition in criminology.",
     "a11y.skip": "Skip to main content",
 
+    "brand.acronym": "NBPAC",
     "brand.full": "New Brunswick Professional Association of Criminology",
 
     "nav.menu": "Menu",
@@ -248,7 +250,7 @@ window.APCNB_TRANSLATIONS = {
     "hero.stat1.label": "Official languages",
     "hero.stat2.label": "Founded",
     "hero.stat3.label": "Jurisdiction",
-    "hero.stat3.value": "Province of N.B.",
+    "hero.stat3.value": "N.B.",
 
     "mission.eyebrow": "Our purpose",
     "mission.title": "Mission, vision and values",

@@ -68,6 +68,9 @@ img, svg { max-width: 100%; }
 .btn-primary:hover { background: var(--gold-soft); }
 .btn-ghost { background: transparent; color: var(--navy); border-color: rgba(21,38,63,.25); }
 .btn-ghost:hover { background: rgba(21,38,63,.06); }
+/* Bouton secondaire sur le fond foncé du hero : texte et bordure clairs */
+.hero .btn-ghost { color: #fff; border-color: rgba(255,255,255,.5); }
+.hero .btn-ghost:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.75); }
 
 /* ---------- Header ---------- */
 .site-header {
