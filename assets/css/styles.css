@@ -261,7 +261,7 @@ img, svg { max-width: 100%; }
 }
 .dir-field input:focus, .dir-field select:focus { outline: none; border-color: var(--gold); }
 .dir-count { color: var(--muted); font-size: .9rem; font-weight: 600; margin: 0 0 16px; }
-.dir-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+.dir-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; align-items: start; }
 .dir-empty { color: var(--muted); padding: 30px 0; }
 
 .mem-card {
@@ -281,7 +281,8 @@ img, svg { max-width: 100%; }
 }
 .mem-meta { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
 .mem-meta dt { font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
-.mem-meta dd { margin: 0; font-size: .9rem; color: var(--ink); }
+.mem-meta dd { margin: 0 0 4px; font-size: .9rem; color: var(--ink); line-height: 1.5; }
+.mem-meta dd a { color: var(--navy); }
 
 @media (max-width: 860px) {
   .public-grid { grid-template-columns: 1fr; }

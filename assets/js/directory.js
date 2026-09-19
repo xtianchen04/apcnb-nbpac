@@ -31,7 +31,10 @@
     "carceral":        { fr: "Milieu carcéral", en: "Correctional settings" },
     "crime-financier": { fr: "Criminalité économique et financière", en: "Economic & financial crime" },
     "analyse-donnees": { fr: "Analyse de données", en: "Data analysis" },
-    "renseignement":   { fr: "Analyse de renseignement criminel", en: "Criminal intelligence analysis" }
+    "renseignement":   { fr: "Analyse de renseignement criminel", en: "Criminal intelligence analysis" },
+    "plan-intervention": { fr: "Plans d'intervention", en: "Intervention planning" },
+    "suivi":           { fr: "Suivi et accompagnement", en: "Case follow-up & support" },
+    "prevention":      { fr: "Prévention de la criminalité", en: "Crime prevention" }
   };
 
   var CAT = {
@@ -41,7 +44,13 @@
 
   // Membres fictifs
   var MEMBERS = [
-    { first: "Christian", last: "Chendjou", city: "Grand Moncton, Shediac, Memramcook", region: "sud-est", cat: "regulier", langs: "FR/EN/DE/ES", areas: ["crime-financier", "analyse-donnees", "renseignement"] },
+    { first: "Christian", last: "Chendjou", city: "Grand Moncton, Shediac, Memramcook", region: "sud-est", cat: "regulier", langs: "FR/EN/DE/ES",
+      web: "oics-communautaire.org",
+      approach: {
+        fr: "Analyse et renseignement criminel; prévention de la criminalité; gestion du risque et réinsertion (modèle Risque-Besoins-Réceptivité); justice réparatrice.",
+        en: "Criminal analysis and intelligence; crime prevention; risk management and reintegration (Risk-Need-Responsivity model); restorative justice."
+      },
+      areas: ["crime-financier", "analyse-donnees", "renseignement", "reinsertion", "evaluation", "plan-intervention", "recherche", "jeunesse", "mediation", "suivi", "prevention"] },
     { first: "Marie-Claude", last: "Bourque", city: "Moncton", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["justice-penale", "victimologie"] },
     { first: "Jonathan", last: "LeBlanc", city: "Dieppe", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["reinsertion", "carceral"] },
     { first: "Sarah", last: "Thompson", city: "Fredericton", region: "capitale", cat: "regulier", langs: "EN", areas: ["evaluation", "recherche"] },
@@ -87,7 +96,9 @@
         '<dl class="mem-meta">' +
           "<dt>" + t("dir.card.region") + "</dt><dd>" + m.city + " · " + REGIONS[m.region][L] + "</dd>" +
           "<dt>" + t("dir.card.areas") + "</dt><dd>" + areas + "</dd>" +
+          (m.approach ? "<dt>" + t("dir.card.approach") + "</dt><dd>" + m.approach[L] + "</dd>" : "") +
           "<dt>" + t("dir.card.langs") + "</dt><dd>" + m.langs + "</dd>" +
+          (m.web ? "<dt>" + t("dir.card.web") + '</dt><dd><a href="https://' + m.web + '" target="_blank" rel="noopener">' + m.web + "</a></dd>" : "") +
         "</dl>" +
       "</article>"
     );

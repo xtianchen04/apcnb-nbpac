@@ -205,7 +205,9 @@ window.APCNB_TRANSLATIONS = {
     "dir.more": "Affinez votre recherche pour voir plus de résultats.",
     "dir.card.region": "Région",
     "dir.card.areas": "Domaines",
+    "dir.card.approach": "Approche",
     "dir.card.langs": "Langues de service",
+    "dir.card.web": "Site web",
     "dir.card.status": "Membre en règle",
     "dir.back": "← Accueil",
     "dir.results": "résultat·s"
@@ -410,7 +412,9 @@ window.APCNB_TRANSLATIONS = {
     "dir.more": "Refine your search to see more results.",
     "dir.card.region": "Region",
     "dir.card.areas": "Areas",
+    "dir.card.approach": "Approach",
     "dir.card.langs": "Languages of service",
+    "dir.card.web": "Website",
     "dir.card.status": "Member in good standing",
     "dir.back": "← Home",
     "dir.results": "result(s)"
