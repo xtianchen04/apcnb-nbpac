@@ -25,7 +25,10 @@
     "evaluation":      { fr: "Évaluation du risque", en: "Risk assessment" },
     "dependances":     { fr: "Dépendances", en: "Addictions" },
     "recherche":       { fr: "Recherche et politiques", en: "Research & policy" },
-    "carceral":        { fr: "Milieu carcéral", en: "Correctional settings" }
+    "carceral":        { fr: "Milieu carcéral", en: "Correctional settings" },
+    "crime-financier": { fr: "Criminalité économique et financière", en: "Economic & financial crime" },
+    "analyse-donnees": { fr: "Analyse de données", en: "Data analysis" },
+    "renseignement":   { fr: "Analyse de renseignement criminel", en: "Criminal intelligence analysis" }
   };
 
   var CAT = {
@@ -35,6 +38,7 @@
 
   // Membres fictifs
   var MEMBERS = [
+    { first: "Christian", last: "Chendjou", city: "Grand Moncton, Shediac, Memramcook", region: "sud-est", cat: "regulier", langs: "FR/EN/DE/ES", areas: ["crime-financier", "analyse-donnees", "renseignement"] },
     { first: "Marie-Claude", last: "Bourque", city: "Moncton", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["justice-penale", "victimologie"] },
     { first: "Jonathan", last: "LeBlanc", city: "Dieppe", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["reinsertion", "carceral"] },
     { first: "Sarah", last: "Thompson", city: "Fredericton", region: "capitale", cat: "regulier", langs: "EN", areas: ["evaluation", "recherche"] },

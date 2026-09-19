@@ -244,11 +244,14 @@ img, svg { max-width: 100%; }
   padding: 12px 16px; color: #6b5012; font-size: .9rem; margin: 0 0 24px;
 }
 .dir-filters {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 14px;
+  display: grid;
+  grid-template-columns: minmax(0,1.8fr) minmax(0,1fr) minmax(0,1.2fr) minmax(0,0.85fr) minmax(0,1.05fr);
+  gap: 14px;
   background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 18px; margin-bottom: 18px;
 }
-.dir-field { display: flex; flex-direction: column; }
+.dir-field { display: flex; flex-direction: column; min-width: 0; }
+.dir-field input, .dir-field select { width: 100%; max-width: 100%; box-sizing: border-box; }
 .dir-field label { font-size: .78rem; font-weight: 600; color: var(--navy); margin-bottom: 5px; }
 .dir-field input, .dir-field select {
   padding: 10px 12px; border: 1px solid var(--line); border-radius: 9px; font: inherit;
