@@ -42,15 +42,56 @@
     "associe":  { fr: "Membre associé", en: "Associate member" }
   };
 
+  // Liste standard des approches criminologiques (adaptée au N.-B., non clinique)
+  var APPROACHES = {
+    "analyse-renseignement":   { fr: "Analyse criminelle et renseignement", en: "Criminal analysis & intelligence" },
+    "prevention":              { fr: "Prévention situationnelle et sociale", en: "Situational & social prevention" },
+    "gestion-risque":          { fr: "Gestion du risque (Risque-Besoins-Réceptivité)", en: "Risk management (Risk-Need-Responsivity)" },
+    "good-lives":              { fr: "Réadaptation par les forces (Good Lives Model)", en: "Strengths-based rehabilitation (Good Lives Model)" },
+    "justice-reparatrice":     { fr: "Justice réparatrice et médiation", en: "Restorative justice & mediation" },
+    "entretien-motiv":         { fr: "Entretien motivationnel", en: "Motivational interviewing" },
+    "cognitivo-correctionnel": { fr: "Cognitivo-comportementale (programmes correctionnels)", en: "Cognitive-behavioural (correctional programs)" },
+    "psychosociale":           { fr: "Psychosociale et communautaire", en: "Psychosocial & community" },
+    "reduction-mefaits":       { fr: "Réduction des méfaits", en: "Harm reduction" }
+  };
+
+  // Services offerts
+  var SERVICES = {
+    "evaluation":   { fr: "Évaluation", en: "Assessment" },
+    "suivi":        { fr: "Suivi et accompagnement", en: "Follow-up & support" },
+    "prevention":   { fr: "Prévention", en: "Prevention" },
+    "expertise":    { fr: "Expertise et témoignage", en: "Expert opinion & testimony" },
+    "formation":    { fr: "Formation et sensibilisation", en: "Training & awareness" },
+    "consultation": { fr: "Consultation", en: "Consultation" },
+    "supervision":  { fr: "Supervision professionnelle", en: "Professional supervision" },
+    "recherche":    { fr: "Recherche et analyse", en: "Research & analysis" }
+  };
+
+  // Clientèle
+  var CLIENTELE = {
+    "adultes":       { fr: "Adultes", en: "Adults" },
+    "adolescents":   { fr: "Adolescents", en: "Adolescents" },
+    "contrevenantes":{ fr: "Personnes contrevenantes", en: "People who have offended" },
+    "victimes":      { fr: "Personnes victimes", en: "Victims of crime" },
+    "organisations": { fr: "Organisations et institutions", en: "Organizations & institutions" },
+    "communautes":   { fr: "Communautés", en: "Communities" }
+  };
+
+  // Mode de prestation
+  var MODES = {
+    "presentiel": { fr: "En présentiel", en: "In person" },
+    "virtuel":    { fr: "Virtuel", en: "Virtual" }
+  };
+
   // Membres fictifs
   var MEMBERS = [
     { first: "Christian", last: "Chendjou", city: "Grand Moncton, Shediac, Memramcook", region: "sud-est", cat: "regulier", langs: "FR/EN/DE/ES",
       web: "oics-communautaire.org",
-      approach: {
-        fr: "Analyse et renseignement criminel; prévention de la criminalité; gestion du risque et réinsertion (modèle Risque-Besoins-Réceptivité); justice réparatrice.",
-        en: "Criminal analysis and intelligence; crime prevention; risk management and reintegration (Risk-Need-Responsivity model); restorative justice."
-      },
-      areas: ["crime-financier", "analyse-donnees", "renseignement", "reinsertion", "evaluation", "plan-intervention", "recherche", "jeunesse", "mediation", "suivi", "prevention"] },
+      modes: ["presentiel", "virtuel"],
+      clientele: ["adultes", "adolescents", "contrevenantes", "organisations", "communautes"],
+      areas: ["crime-financier", "analyse-donnees", "renseignement", "reinsertion", "evaluation", "plan-intervention", "recherche", "jeunesse", "mediation", "suivi", "prevention"],
+      approaches: ["analyse-renseignement", "prevention", "gestion-risque", "good-lives", "justice-reparatrice", "entretien-motiv"],
+      services: ["evaluation", "suivi", "prevention", "expertise", "formation", "recherche"] },
     { first: "Marie-Claude", last: "Bourque", city: "Moncton", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["justice-penale", "victimologie"] },
     { first: "Jonathan", last: "LeBlanc", city: "Dieppe", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["reinsertion", "carceral"] },
     { first: "Sarah", last: "Thompson", city: "Fredericton", region: "capitale", cat: "regulier", langs: "EN", areas: ["evaluation", "recherche"] },
@@ -79,10 +120,17 @@
     sel.value = cur;
   }
 
+  function joinMap(keys, map, L) {
+    return (keys || []).map(function (k) { return (map[k] ? map[k][L] : k); }).join(", ");
+  }
+  function metaRow(label, value) {
+    return value ? "<dt>" + label + "</dt><dd>" + value + "</dd>" : "";
+  }
+
   function card(m) {
     var L = lang();
-    var areas = m.areas.map(function (a) { return AREAS[a][L]; }).join(", ");
     var initials = (m.first[0] + m.last[0]).toUpperCase();
+    var web = m.web ? '<a href="https://' + m.web + '" target="_blank" rel="noopener">' + m.web + "</a>" : "";
     return (
       '<article class="mem-card">' +
         '<div class="mem-head">' +
@@ -94,11 +142,14 @@
           '<span class="mem-badge" title="' + t("dir.card.status") + '">✓</span>' +
         "</div>" +
         '<dl class="mem-meta">' +
-          "<dt>" + t("dir.card.region") + "</dt><dd>" + m.city + " · " + REGIONS[m.region][L] + "</dd>" +
-          "<dt>" + t("dir.card.areas") + "</dt><dd>" + areas + "</dd>" +
-          (m.approach ? "<dt>" + t("dir.card.approach") + "</dt><dd>" + m.approach[L] + "</dd>" : "") +
-          "<dt>" + t("dir.card.langs") + "</dt><dd>" + m.langs + "</dd>" +
-          (m.web ? "<dt>" + t("dir.card.web") + '</dt><dd><a href="https://' + m.web + '" target="_blank" rel="noopener">' + m.web + "</a></dd>" : "") +
+          metaRow(t("dir.card.region"), m.city + " · " + REGIONS[m.region][L]) +
+          metaRow(t("dir.card.clientele"), joinMap(m.clientele, CLIENTELE, L)) +
+          metaRow(t("dir.card.areas"), joinMap(m.areas, AREAS, L)) +
+          metaRow(t("dir.card.approach"), joinMap(m.approaches, APPROACHES, L)) +
+          metaRow(t("dir.card.services"), joinMap(m.services, SERVICES, L)) +
+          metaRow(t("dir.card.mode"), joinMap(m.modes, MODES, L)) +
+          metaRow(t("dir.card.langs"), m.langs) +
+          metaRow(t("dir.card.web"), web) +
         "</dl>" +
       "</article>"
     );
