@@ -5,6 +5,9 @@
 (function () {
   "use strict";
 
+  var searched = false;      // n'affiche rien tant qu'une recherche n'a pas été lancée
+  var MAXRESULTS = 50;       // limite d'affichage (utile si des milliers de membres)
+
   // Régions du Nouveau-Brunswick (bilingue)
   var REGIONS = {
     "sud-est":   { fr: "Sud-Est (Moncton, Dieppe)", en: "South-East (Moncton, Dieppe)" },
@@ -91,6 +94,13 @@
   }
 
   function render() {
+    var grid = document.getElementById("dir-results");
+    var count = document.getElementById("dir-count");
+    if (!searched) {
+      grid.innerHTML = '<p class="dir-empty">' + t("dir.hint") + "</p>";
+      count.textContent = "";
+      return;
+    }
     var q = (document.getElementById("dir-search").value || "").trim().toLowerCase();
     var region = document.getElementById("dir-region").value;
     var area = document.getElementById("dir-area").value;
@@ -109,11 +119,10 @@
       return true;
     });
 
-    var grid = document.getElementById("dir-results");
-    var count = document.getElementById("dir-count");
     count.textContent = list.length + " " + t("dir.results");
+    var shown = list.slice(0, MAXRESULTS);
     grid.innerHTML = list.length
-      ? list.map(card).join("")
+      ? shown.map(card).join("") + (list.length > MAXRESULTS ? '<p class="dir-empty">' + t("dir.more") + "</p>" : "")
       : '<p class="dir-empty">' + t("dir.empty") + "</p>";
   }
 
@@ -122,11 +131,14 @@
     fillSelect(document.getElementById("dir-area"), AREAS);
     fillSelect(document.getElementById("dir-category"), CAT);
 
+    function doSearch() { searched = true; render(); }
     ["dir-search", "dir-region", "dir-area", "dir-lang", "dir-category"].forEach(function (id) {
       var el = document.getElementById(id);
-      el.addEventListener("input", render);
-      el.addEventListener("change", render);
+      el.addEventListener("input", doSearch);
+      el.addEventListener("change", doSearch);
     });
+    var form = document.querySelector(".dir-filters");
+    if (form) form.addEventListener("submit", function (e) { e.preventDefault(); doSearch(); });
 
     // Re-render (and relabel selects) when the language changes
     document.querySelectorAll(".lang-btn").forEach(function (b) {

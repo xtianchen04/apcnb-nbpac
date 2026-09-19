@@ -252,6 +252,8 @@ img, svg { max-width: 100%; }
 }
 .dir-field { display: flex; flex-direction: column; min-width: 0; }
 .dir-field input, .dir-field select { width: 100%; max-width: 100%; box-sizing: border-box; }
+.dir-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; }
+.dir-actions .btn { cursor: pointer; }
 .dir-field label { font-size: .78rem; font-weight: 600; color: var(--navy); margin-bottom: 5px; }
 .dir-field input, .dir-field select {
   padding: 10px 12px; border: 1px solid var(--line); border-radius: 9px; font: inherit;
