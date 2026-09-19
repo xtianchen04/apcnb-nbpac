@@ -34,7 +34,8 @@
     "renseignement":   { fr: "Analyse de renseignement criminel", en: "Criminal intelligence analysis" },
     "plan-intervention": { fr: "Plans d'intervention", en: "Intervention planning" },
     "suivi":           { fr: "Suivi et accompagnement", en: "Case follow-up & support" },
-    "prevention":      { fr: "Prévention de la criminalité", en: "Crime prevention" }
+    "prevention":      { fr: "Prévention de la criminalité", en: "Crime prevention" },
+    "psychosocial-nonclinique": { fr: "Accompagnement psychosocial (non clinique)", en: "Psychosocial support (non-clinical)" }
   };
 
   var CAT = {
@@ -89,7 +90,7 @@
       web: "oics-communautaire.org",
       modes: ["presentiel", "virtuel"],
       clientele: ["adultes", "adolescents", "contrevenantes", "organisations", "communautes"],
-      areas: ["crime-financier", "analyse-donnees", "renseignement", "reinsertion", "evaluation", "plan-intervention", "recherche", "jeunesse", "mediation", "suivi", "prevention"],
+      areas: ["crime-financier", "analyse-donnees", "renseignement", "reinsertion", "psychosocial-nonclinique", "evaluation", "plan-intervention", "recherche", "jeunesse", "mediation", "suivi", "prevention"],
       approaches: ["analyse-renseignement", "prevention", "gestion-risque", "good-lives", "justice-reparatrice", "entretien-motiv"],
       services: ["evaluation", "suivi", "prevention", "expertise", "formation", "recherche"] },
     { first: "Marie-Claude", last: "Bourque", city: "Moncton", region: "sud-est", cat: "regulier", langs: "FR/EN", areas: ["justice-penale", "victimologie"] },
