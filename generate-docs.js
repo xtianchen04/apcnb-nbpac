@@ -97,13 +97,19 @@ function titleBlock(kicker, title) {
     new Paragraph({ spacing: { after: 40 }, border: { bottom: { style: BorderStyle.SINGLE, size: 12, color: gold, space: 6 } }, children: [] }),
   ];
 }
-function metaBlock(orgLabel, org, dateLabel, dateVal) {
+function metaBlock(orgLabel, org, dateLabel, dateVal, updLabel, updVal) {
+  var line2 = [
+    new TextRun({ text: "Version : ", bold: true, color: navy }), new TextRun({ text: "1.0    ", color: grey }),
+    new TextRun({ text: dateLabel + " : ", bold: true, color: navy }), new TextRun({ text: dateVal, color: grey })
+  ];
+  if (updLabel) {
+    line2.push(new TextRun({ text: "    " + updLabel + " : ", bold: true, color: navy }));
+    line2.push(new TextRun({ text: updVal, color: grey }));
+  }
   return [
     new Paragraph({ spacing: { before: 60, after: 20 }, children: [
       new TextRun({ text: orgLabel + " : ", bold: true, color: navy }), new TextRun({ text: org, color: grey }) ] }),
-    new Paragraph({ spacing: { after: 220 }, children: [
-      new TextRun({ text: "Version : ", bold: true, color: navy }), new TextRun({ text: "1.0    ", color: grey }),
-      new TextRun({ text: dateLabel + " : ", bold: true, color: navy }), new TextRun({ text: dateVal, color: grey }) ] }),
+    new Paragraph({ spacing: { after: 220 }, children: line2 }),
   ];
 }
 
@@ -168,14 +174,14 @@ function buildStandard(spec, mode) {
   if (mode !== "en") {
     children.push(
       ...titleBlock("Français", spec.fr.title),
-      ...metaBlock("Organisme", C.NAME_FR + " (APCNB)", "Adopté le", "2 juin 2026"),
+      ...metaBlock("Organisme", C.NAME_FR + " (APCNB)", "Adopté le", "2 juin 2026", "Mise à jour", "25 septembre 2026"),
       ...spec.fr.blocks.flatMap(renderBlock));
   }
   if (mode === "both") children.push(new Paragraph({ children: [new PageBreak()] }));
   if (mode !== "fr") {
     children.push(
       ...titleBlock("English", spec.en.title),
-      ...metaBlock("Organization", C.NAME_EN + " (NBPAC)", "Adopted", "June 2, 2026"),
+      ...metaBlock("Organization", C.NAME_EN + " (NBPAC)", "Adopted", "June 2, 2026", "Updated", "September 25, 2026"),
       ...spec.en.blocks.flatMap(renderBlock));
   }
 

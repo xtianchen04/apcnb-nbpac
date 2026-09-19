@@ -155,14 +155,18 @@ function makeRenderer(doc) {
     const y = doc.y; doc.moveTo(M.left, y).lineTo(M.left + CW, y).lineWidth(2).stroke(gold);
     doc.y += 10;
   }
-  function metaBlock(orgLabel, org, dateLabel, dateVal) {
+  function metaBlock(orgLabel, org, dateLabel, dateVal, updLabel, updVal) {
     doc.font("Helvetica").fontSize(9).fillColor(grey);
     doc.font("Helvetica-Bold").fillColor(navy).text(orgLabel + " : ", { continued: true })
       .font("Helvetica").fillColor(grey).text(org);
     doc.font("Helvetica-Bold").fillColor(navy).text("Version : ", { continued: true })
       .font("Helvetica").fillColor(grey).text("1.0     ", { continued: true })
       .font("Helvetica-Bold").fillColor(navy).text(dateLabel + " : ", { continued: true })
-      .font("Helvetica").fillColor(grey).text(dateVal);
+      .font("Helvetica").fillColor(grey).text(updLabel ? (dateVal + "     ") : dateVal, { continued: !!updLabel });
+    if (updLabel) {
+      doc.font("Helvetica-Bold").fillColor(navy).text(updLabel + " : ", { continued: true })
+        .font("Helvetica").fillColor(grey).text(updVal);
+    }
     doc.y += 12;
   }
   return { block, titleBlock, metaBlock };
@@ -201,13 +205,13 @@ function buildStandardPDF(spec, mode, outDir) {
   doc.addPage();
   if (mode !== "en") {
     R.titleBlock("Français", spec.fr.title);
-    R.metaBlock("Organisme", C.NAME_FR + " (APCNB)", "Adopté le", "2 juin 2026");
+    R.metaBlock("Organisme", C.NAME_FR + " (APCNB)", "Adopté le", "2 juin 2026", "Mise à jour", "25 septembre 2026");
     spec.fr.blocks.forEach(R.block);
   }
   if (mode !== "fr") {
     if (mode === "both") doc.addPage();
     R.titleBlock("English", spec.en.title);
-    R.metaBlock("Organization", C.NAME_EN + " (NBPAC)", "Adopted", "June 2, 2026");
+    R.metaBlock("Organization", C.NAME_EN + " (NBPAC)", "Adopted", "June 2, 2026", "Updated", "September 25, 2026");
     spec.en.blocks.forEach(R.block);
   }
   const range = doc.bufferedPageRange();
