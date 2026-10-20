@@ -1,6 +1,12 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "apcnb-nbpac.vercel.app" }],
+      "destination": "https://www.apcnb-nbpac.ca/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "apcnb-nbpac.vercel.app" }],
       "destination": "https://www.apcnb-nbpac.ca/:path*",
