@@ -130,7 +130,7 @@ function makeFooter() {
     alignment: AlignmentType.CENTER,
     border: { top: { style: BorderStyle.SINGLE, size: 6, color: line, space: 6 } },
     children: [
-      new TextRun({ text: C.ADDR + "   ·   " + C.EMAIL + "   ·   ", color: grey, size: 15 }),
+      new TextRun({ text: C.ADDR + "   ·   " + C.EMAIL + "   ·   Tél. " + C.PHONE + "   ·   ", color: grey, size: 15 }),
       new TextRun({ children: [PageNumber.CURRENT], color: grey, size: 15 }),
       new TextRun({ text: "/", color: grey, size: 15 }),
       new TextRun({ children: [PageNumber.TOTAL_PAGES], color: grey, size: 15 })
@@ -255,7 +255,7 @@ function buildLetterhead(spec, mode) {
   ] });
   const lhFooter = new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER,
     border: { top: { style: BorderStyle.SINGLE, size: 6, color: line, space: 6 } },
-    children: [new TextRun({ text: C.ADDR + "   ·   " + C.EMAIL + "   ·   " + C.SITE, color: grey, size: 15 })] })] });
+    children: [new TextRun({ text: C.ADDR + "   ·   " + C.EMAIL + "   ·   Tél. " + C.PHONE + "   ·   " + C.SITE, color: grey, size: 15 })] })] });
 
   const children = [new Paragraph({ spacing: { before: 200 }, children: [] })];
   if (mode !== "en") children.push(...bodyParas(spec.bodyFr));

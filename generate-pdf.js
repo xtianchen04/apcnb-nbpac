@@ -192,7 +192,7 @@ function drawFooter(doc, n, total) {
   doc.moveTo(M.left, y).lineTo(PW - M.right, y).lineWidth(0.7).stroke(line);
   inFooterRegion(doc, () => {
     doc.font("Helvetica").fontSize(7.8).fillColor(grey)
-      .text(C.ADDR + "   ·   " + C.EMAIL, M.left, y + 6, { width: CW, align: "left", lineBreak: false });
+      .text(C.ADDR + "   ·   " + C.EMAIL + "   ·   Tél. " + C.PHONE, M.left, y + 6, { width: CW, align: "left", lineBreak: false });
     doc.text("Page " + n + " / " + total, M.left, y + 6, { width: CW, align: "right", lineBreak: false });
   });
 }
@@ -268,7 +268,7 @@ function buildLetterheadPDF(spec, mode, outDir) {
     doc.moveTo(M.left, fy).lineTo(PW - M.right, fy).lineWidth(0.7).stroke(line);
     inFooterRegion(doc, () => {
       doc.font("Helvetica").fontSize(8).fillColor(grey)
-        .text(C.ADDR + "   ·   " + C.EMAIL + "   ·   " + C.SITE, M.left, fy + 6, { width: CW, align: "center", lineBreak: false });
+        .text(C.ADDR + "   ·   " + C.EMAIL + "   ·   Tél. " + C.PHONE + "   ·   " + C.SITE, M.left, fy + 6, { width: CW, align: "center", lineBreak: false });
     });
   };
   const renderBody = (txt) => {

@@ -8,7 +8,8 @@ const NAME_EN = "New Brunswick Professional Association of Criminology";
 const ACRO = "APCNB · NBPAC";
 const ADDR = "C.P. 0000, Fredericton (Nouveau-Brunswick) E3B 0A0";
 const EMAIL = "info@apcnb-nbpac.ca";
-const SITE = "www.apcnb.ca";
+const PHONE = "506-381-9495";
+const SITE = "www.apcnb-nbpac.ca";
 
 const COLORS = { navy: "15263F", gold: "B08A3E", grey: "5B6675", line: "CCCCCC",
   paper: "FAF8F3", paperRow: "F7F4EC", goldSoft: "D9BE83", ink: "1B2330" };
@@ -1554,7 +1555,7 @@ const LETTERHEAD = {
 };
 
 module.exports = {
-  NAME_FR, NAME_EN, ACRO, ADDR, EMAIL, SITE, COLORS,
+  NAME_FR, NAME_EN, ACRO, ADDR, EMAIL, PHONE, SITE, COLORS,
   H2, P, LEAD, UL, OL, TABLE, CALLOUT, GAP, SIGN,
   DOCS, CERTIFICATE, CERTIFICATE_COMPLETION, CERTIFICATES, LETTERHEAD, LETTERS
 };
