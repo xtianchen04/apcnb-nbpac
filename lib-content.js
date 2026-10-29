@@ -6,7 +6,7 @@
 const NAME_FR = "Association professionnelle de criminologie du Nouveau-Brunswick";
 const NAME_EN = "New Brunswick Professional Association of Criminology";
 const ACRO = "APCNB · NBPAC";
-const ADDR = "C.P. 0000, Fredericton (Nouveau-Brunswick) E3B 0A0";
+const ADDR = "96, rue Weldon, Dieppe (Nouveau-Brunswick) E1C 5W2";
 const EMAIL = "info@apcnb-nbpac.ca";
 const PHONE = "506-381-9495";
 const SITE = "www.apcnb-nbpac.ca";
@@ -113,48 +113,164 @@ DOCS.push({
   file: "2-Code-deontologie-Code-of-Ethics",
   headerRight: "Code de déontologie / Code of Ethics",
   fr: { title: "Code de déontologie", blocks: [
-    LEAD("Le présent code énonce les obligations éthiques de tout membre de l'APCNB. Il vise à protéger le public, à préserver la confiance envers la profession et à guider la conduite des criminologues."),
-    H2("1. Champ d'application"),
-    P("Le code s'applique à tous les membres, quelle que soit leur catégorie, dans l'ensemble de leurs activités professionnelles : recherche, évaluation, intervention, enseignement et consultation."),
-    H2("2. Intégrité et honnêteté"),
-    UL(["Agir avec honnêteté, probité et bonne foi.", "Ne participer à aucune fraude ni fausse représentation de ses qualifications.", "Ne présenter comme siens que les travaux réellement accomplis."]),
-    H2("3. Compétence et champ d'exercice"),
-    UL(["N'exercer que dans les limites de sa compétence, de sa formation et de son expérience.", "Maintenir ses connaissances à jour conformément à la Politique de formation continue.", "Fonder ses avis sur des données probantes et des méthodes reconnues.", "Respecter les limites de son champ d'exercice; ne poser aucun acte réservé à une profession réglementée (travail social, psychologie, counseling, droit, médecine) sans en détenir le titre, et diriger la personne vers la profession compétente au besoin."]),
-    H2("4. Confidentialité"),
-    UL(["Protéger les renseignements confidentiels obtenus dans l'exercice de ses fonctions.", "Ne les divulguer qu'avec consentement ou lorsque la loi l'exige.", "Prendre les mesures raisonnables pour assurer la sécurité des données."]),
-    H2("5. Objectivité et conflits d'intérêts"),
-    UL(["Demeurer objectif et impartial.", "Déclarer sans délai tout conflit d'intérêts réel, potentiel ou apparent.", "Ne pas abuser de sa position pour obtenir un avantage indu."]),
-    H2("6. Respect de la dignité humaine"),
-    UL(["Respecter les droits et la dignité de toute personne, sans discrimination.", "S'abstenir de tout harcèlement, abus de pouvoir ou exploitation.", "Tenir compte des contextes culturels, linguistiques et sociaux."]),
-    H2("7. Responsabilité envers le public et la profession"),
-    UL(["Faire passer l'intérêt public avant son intérêt personnel.", "Contribuer à la réputation et à l'avancement de la profession.", "Signaler tout manquement déontologique grave."]),
+    LEAD("Le présent code énonce les valeurs, les principes et les obligations déontologiques de tout membre de l'APCNB. Il vise à protéger le public, à préserver la confiance envers la profession, à guider la conduite des criminologues et à servir de cadre pour évaluer un manquement à la déontologie."),
+    H2("Objet et application"),
+    P("Le code s'applique à tous les membres, quelle que soit leur catégorie, dans l'ensemble de leurs activités : analyse et recherche, renseignement criminel, prévention, évaluation du risque, intervention et accompagnement, enseignement, consultation, expertise et témoignage. Dans le présent code, le mot « personne » désigne toute personne ou tout groupe servi ou touché par la pratique du criminologue, notamment les personnes victimes, les personnes contrevenantes, les organisations, les tribunaux et les communautés."),
+    H2("Une pratique non clinique"),
+    P("Le criminologue exerce dans le domaine du crime et de la justice. Il ne pose pas de diagnostic, n'offre pas de psychothérapie ni de traitement de la santé mentale, et ne réalise aucun acte réservé à une profession réglementée (travail social, psychologie, counseling thérapeutique, droit, médecine) sans en détenir le titre. Il reconnaît les limites de son champ et dirige la personne vers la profession compétente au besoin."),
+    H2("Valeurs fondamentales"),
+    UL([
+      "**Dignité et valeur de la personne** : respecter les droits, l'autonomie et la valeur intrinsèque de chaque personne.",
+      "**Justice et équité** : agir avec impartialité et contribuer à un système de justice équitable.",
+      "**Intégrité** : agir avec honnêteté, probité et transparence.",
+      "**Compétence et rigueur** : fonder sa pratique sur des données probantes et des méthodes reconnues.",
+      "**Confidentialité** : protéger les renseignements obtenus dans l'exercice de ses fonctions.",
+      "**Protection du public** : faire passer l'intérêt et la sécurité du public avant son intérêt personnel.",
+      "**Respect de la diversité et sécurisation culturelle** : reconnaître et respecter les cultures, les langues et les perspectives, notamment celles des peuples autochtones, dans un esprit de vérité et de réconciliation."
+    ]),
+    H2("1. Devoirs envers les personnes et le public"),
+    UL([
+      "**1.1 Intérêt et sécurité** : faire primer l'intérêt et la sécurité de la personne et du public; ne jamais utiliser sa position pour causer un préjudice.",
+      "**1.2 Non-discrimination** : traiter chaque personne sans discrimination, dans le respect de sa dignité et de ses droits.",
+      "**1.3 Sécurisation culturelle et réconciliation** : tenir compte des contextes culturels et linguistiques, reconnaître et respecter les perspectives des peuples autochtones et favoriser la sécurité culturelle.",
+      "**1.4 Consentement éclairé** : obtenir un consentement libre et éclairé, explicite ou implicite selon le contexte; tenir compte de la capacité des personnes mineures; obtenir un consentement avant tout recours à une technologie, à l'intelligence artificielle, à un enregistrement sonore ou vidéo, ou à l'observation par un tiers.",
+      "**1.5 Confidentialité** : ne divulguer les renseignements qu'avec consentement ou lorsque la loi l'exige; ne pas rechercher ni recueillir de renseignements sur une personne, y compris sur les médias sociaux, sans motif professionnel; aviser la personne et, s'il y a lieu, l'employeur en cas de violation; demander un avis juridique en cas de doute; garder confidentielles les sources de référence; respecter les droits des personnes décédées.",
+      "**1.6 Dossiers** : tenir, conserver et sécuriser les dossiers de façon appropriée; n'y consigner que les renseignements pertinents, en temps opportun; informer la personne de son droit d'accès; protéger l'anonymat des tiers; appliquer des mesures de sécurité technologiques.",
+      "**1.7 Sensibilité aux traumatismes** : adopter une approche non clinique sensible aux traumatismes et à la victimisation."
+    ]),
+    H2("2. Devoirs dans les relations professionnelles"),
+    UL([
+      "**2.1 Limites professionnelles** : établir et maintenir des limites claires; évaluer, gérer et documenter tout franchissement inévitable; agir sans délai en cas de franchissement inapproprié.",
+      "**2.2 Contacts physiques** : éviter tout contact physique inapproprié; cette règle ne vise pas les contacts appropriés en situation de crise ou de désescalade.",
+      "**2.3 Relations intimes ou sexuelles** : s'abstenir de toute relation intime, romantique ou sexuelle avec une personne servie, actuelle ou ancienne; ne pas offrir de services à une personne avec qui existe ou a existé une telle relation.",
+      "**2.4 Exploitation et cadeaux** : éviter toute relation d'affaires ou financière avec une personne servie; n'accepter que des cadeaux de valeur symbolique, appropriés et conformes aux politiques.",
+      "**2.5 Conflits d'intérêts** : éviter les relations doubles ou multiples; déclarer sans délai tout conflit réel, potentiel ou apparent; protéger la personne lorsqu'une relation double est inévitable."
+    ]),
+    H2("3. Devoirs envers les collègues et les autres professions"),
+    UL([
+      "**3.1 Respect et collaboration** : traiter les collègues et les autres professionnels avec respect; favoriser le travail interdisciplinaire.",
+      "**3.2 Complémentarité et référence** : exercer en complémentarité, jamais en substitution; diriger la personne vers la profession réglementée compétente lorsque la situation l'exige.",
+      "**3.3 Supervision et stages** : offrir une supervision équitable, respectueuse et objective; respecter les exigences des établissements d'enseignement et signaler toute préoccupation de compétence."
+    ]),
+    H2("4. Devoirs dans le milieu de travail"),
+    UL([
+      "**4.1 Position de pouvoir** : reconnaître qu'on occupe une position de pouvoir et protéger les personnes de tout abus, pendant et après les services.",
+      "**4.2 Aptitude et soin de soi** : prendre soin de soi et obtenir de l'aide au besoin afin que des difficultés personnelles ne nuisent pas aux services.",
+      "**4.3 Connaissance du cadre** : connaître les lois, les politiques, les programmes et les enjeux relatifs aux populations servies."
+    ]),
+    H2("5. Devoirs en pratique autonome"),
+    UL([
+      "**5.1 Politiques claires** : posséder les compétences requises, établir des politiques et des procédures claires et prévoir les urgences.",
+      "**5.2 Assurance** : souscrire une assurance responsabilité professionnelle, y compris pour les services électroniques.",
+      "**5.3 Promotion des services** : diffuser une publicité exacte et à jour; obtenir le consentement avant tout témoignage; ne pas solliciter de recommandations."
+    ]),
+    H2("6. Devoirs envers le public et la société"),
+    UL([
+      "**6.1 Protection du titre** : signaler l'usurpation du titre ou l'exercice de la criminologie par une personne non qualifiée.",
+      "**6.2 Expertise et témoignage** : offrir des avis, expertises et témoignages objectifs, fondés sur des données probantes et limités à sa compétence.",
+      "**6.3 Prévention et éducation** : contribuer à la prévention de la criminalité et à l'éducation du public."
+    ]),
+    H2("7. Devoirs envers la profession et l'Association"),
+    UL([
+      "**7.1 Compétence continue** : maintenir et perfectionner ses compétences conformément à la Politique de formation continue.",
+      "**7.2 Intégrité de la profession** : contribuer à la réputation de la profession et ne pas la déconsidérer.",
+      "**7.3 Soutien au processus déontologique** : collaborer aux procédures des comités des plaintes et de discipline; fournir les renseignements requis dans une enquête; signaler toute pratique illégale ou tout manquement grave."
+    ]),
     H2("8. Service dans les deux langues officielles"),
-    P("Dans la mesure du possible, le membre facilite l'accès à ses services en français ou en anglais selon le choix de la personne."),
-    H2("9. Manquements et mesures"),
-    P("Tout manquement peut donner lieu à des mesures disciplinaires conformément à la Politique de traitement des plaintes, pouvant aller de l'avertissement à la radiation."),
-    CALLOUT("Engagement : En adhérant à l'APCNB, chaque membre s'engage à respecter le présent code et à en promouvoir les principes.")
+    P("Dans la mesure du possible, le membre facilite l'accès à ses services en français ou en anglais selon le choix de la personne, et reçoit les communications de l'Association dans la langue de son choix."),
+    H2("9. Prise de décision déontologique"),
+    OL([
+      "Cerner la question déontologique et les personnes touchées.",
+      "Repérer les valeurs, les obligations et les lois applicables.",
+      "Envisager les options et leurs conséquences.",
+      "Consulter au besoin (collègues, supervision, conseiller juridique).",
+      "Décider, agir et consigner la démarche.",
+      "Revoir la décision et en tirer des apprentissages."
+    ]),
+    H2("10. Manquements et mesures"),
+    P("Tout manquement peut donner lieu à des mesures conformément à la Politique de traitement des plaintes, pouvant aller de l'avertissement à la radiation."),
+    CALLOUT("Engagement : en adhérant à l'APCNB, chaque membre s'engage à respecter le présent code et à en promouvoir les principes."),
+    CALLOUT("Avis : ce code s'inspire des meilleures pratiques déontologiques; il devrait être validé par un conseiller juridique du Nouveau-Brunswick et ne confère aucun droit d'exercice exclusif.")
   ]},
   en: { title: "Code of Ethics", blocks: [
-    LEAD("This code sets out the ethical obligations of every NBPAC member. It is intended to protect the public, preserve trust in the profession and guide the conduct of criminologists."),
-    H2("1. Scope"),
-    P("The code applies to all members, regardless of category, across all professional activities: research, assessment, intervention, teaching and consulting."),
-    H2("2. Integrity and Honesty"),
-    UL(["Act with honesty, probity and good faith.", "Take part in no fraud or misrepresentation of qualifications.", "Claim as one's own only work actually performed."]),
-    H2("3. Competence and scope of practice"),
-    UL(["Practise only within the limits of one's competence, training and experience.", "Keep knowledge current under the Continuing Professional Development Policy.", "Base opinions on evidence and recognized methods.", "Respect the limits of one's scope of practice; perform no act reserved to a regulated profession (social work, psychology, counselling therapy, law, medicine) without holding the title, and refer the person to the competent profession when needed."]),
-    H2("4. Confidentiality"),
-    UL(["Protect confidential information obtained in the course of duties.", "Disclose it only with consent or where required by law.", "Take reasonable measures to ensure data security."]),
-    H2("5. Objectivity and Conflicts of Interest"),
-    UL(["Remain objective and impartial.", "Promptly declare any actual, potential or apparent conflict of interest.", "Not misuse one's position for undue advantage."]),
-    H2("6. Respect for Human Dignity"),
-    UL(["Respect the rights and dignity of every person, without discrimination.", "Refrain from harassment, abuse of power or exploitation.", "Account for cultural, linguistic and social contexts."]),
-    H2("7. Accountability to the Public and the Profession"),
-    UL(["Place the public interest ahead of personal interest.", "Contribute to the reputation and advancement of the profession.", "Report any serious ethical breach."]),
-    H2("8. Service in Both Official Languages"),
-    P("Wherever possible, the member facilitates access to their services in French or English according to the person's choice."),
-    H2("9. Breaches and Measures"),
-    P("Any breach may lead to disciplinary measures under the Complaints-Handling Policy, ranging from a warning to removal."),
-    CALLOUT("Commitment: By joining the NBPAC, each member undertakes to respect this code and to promote its principles.")
+    LEAD("This code sets out the values, principles and ethical obligations of every NBPAC member. It is intended to protect the public, preserve trust in the profession, guide the conduct of criminologists and provide a framework for assessing an ethical breach."),
+    H2("Purpose and application"),
+    P("The code applies to all members, regardless of category, across all their activities: analysis and research, criminal intelligence, prevention, risk assessment, intervention and support, teaching, consulting, expert opinion and testimony. In this code, the word \"person\" means any person or group served or affected by the criminologist's practice, including victims, people who have offended, organizations, courts and communities."),
+    H2("A non-clinical practice"),
+    P("The criminologist works in the field of crime and justice. They make no diagnosis, provide no psychotherapy or mental-health treatment, and perform no act reserved to a regulated profession (social work, psychology, counselling therapy, law, medicine) without holding the title. They recognize the limits of their scope and refer the person to the competent profession when needed."),
+    H2("Core values"),
+    UL([
+      "**Dignity and worth of the person**: respect the rights, autonomy and inherent worth of every person.",
+      "**Justice and fairness**: act impartially and contribute to a fair justice system.",
+      "**Integrity**: act with honesty, probity and transparency.",
+      "**Competence and rigour**: base practice on evidence and recognized methods.",
+      "**Confidentiality**: protect information obtained in the course of duties.",
+      "**Protection of the public**: place the public interest and safety ahead of personal interest.",
+      "**Respect for diversity and cultural safety**: recognize and respect cultures, languages and perspectives, including those of Indigenous peoples, in a spirit of truth and reconciliation."
+    ]),
+    H2("1. Obligations to persons and the public"),
+    UL([
+      "**1.1 Interest and safety**: place the interest and safety of the person and the public first; never use one's position to cause harm.",
+      "**1.2 Non-discrimination**: treat every person without discrimination, with respect for their dignity and rights.",
+      "**1.3 Cultural safety and reconciliation**: account for cultural and linguistic contexts, recognize and respect Indigenous perspectives, and foster cultural safety.",
+      "**1.4 Informed consent**: obtain free and informed consent, explicit or implied as appropriate; account for the capacity of minors; obtain consent before any use of technology, artificial intelligence, audio or video recording, or observation by a third party.",
+      "**1.5 Confidentiality**: disclose information only with consent or where required by law; do not search for or gather a person's information, including on social media, without a professional reason; notify the person and, where applicable, the employer of any breach; seek legal advice when in doubt; keep referral sources confidential; respect the rights of deceased persons.",
+      "**1.6 Records**: maintain, retain and secure records appropriately; record only relevant information, in a timely manner; inform the person of their right of access; protect the anonymity of third parties; apply technological security measures.",
+      "**1.7 Trauma sensitivity**: adopt a non-clinical, trauma- and victimization-aware approach."
+    ]),
+    H2("2. Obligations in professional relationships"),
+    UL([
+      "**2.1 Professional boundaries**: set and maintain clear boundaries; assess, manage and document any unavoidable crossing; act promptly on inappropriate crossings.",
+      "**2.2 Physical contact**: avoid inappropriate physical contact; this rule does not apply to appropriate contact during crisis intervention or de-escalation.",
+      "**2.3 Intimate or sexual relationships**: refrain from any intimate, romantic or sexual relationship with a person served, current or former; do not provide services to a person with whom such a relationship exists or existed.",
+      "**2.4 Exploitation and gifts**: avoid any business or financial relationship with a person served; accept only gifts of nominal value that are appropriate and consistent with policies.",
+      "**2.5 Conflicts of interest**: avoid dual or multiple relationships; promptly declare any actual, potential or apparent conflict; protect the person when a dual relationship is unavoidable."
+    ]),
+    H2("3. Obligations to colleagues and other professions"),
+    UL([
+      "**3.1 Respect and collaboration**: treat colleagues and other professionals with respect; foster interdisciplinary work.",
+      "**3.2 Complementarity and referral**: work in complement, never as a substitute; refer the person to the competent regulated profession when the situation requires it.",
+      "**3.3 Supervision and placements**: provide fair, respectful and objective supervision; comply with educational-institution requirements and report any competency concern."
+    ]),
+    H2("4. Obligations in the workplace"),
+    UL([
+      "**4.1 Position of power**: recognize one's position of power and protect persons from any abuse of it, during and after services.",
+      "**4.2 Fitness and self-care**: practise self-care and seek help when needed so that personal difficulties do not impair services.",
+      "**4.3 Knowledge of the framework**: be knowledgeable about the laws, policies, programs and issues relating to the populations served."
+    ]),
+    H2("5. Obligations in independent practice"),
+    UL([
+      "**5.1 Clear policies**: hold the required competencies, set clear policies and procedures, and plan for emergencies.",
+      "**5.2 Insurance**: maintain professional liability insurance, including for electronic services.",
+      "**5.3 Promotion of services**: use accurate and current advertising; obtain consent before any testimonial; do not solicit endorsements."
+    ]),
+    H2("6. Obligations to the public and society"),
+    UL([
+      "**6.1 Title protection**: report misuse of the title or the practice of criminology by an unqualified person.",
+      "**6.2 Expertise and testimony**: provide objective opinions, expertise and testimony, based on evidence and limited to one's competence.",
+      "**6.3 Prevention and education**: contribute to crime prevention and public education."
+    ]),
+    H2("7. Obligations to the profession and the Association"),
+    UL([
+      "**7.1 Continuing competence**: maintain and develop competencies under the Continuing Professional Development Policy.",
+      "**7.2 Integrity of the profession**: contribute to the profession's reputation and do not bring it into disrepute.",
+      "**7.3 Support of the ethics process**: cooperate with the procedures of the complaints and discipline committees; provide the information required in an investigation; report any illegal practice or serious breach."
+    ]),
+    H2("8. Service in both official languages"),
+    P("Wherever possible, the member facilitates access to their services in French or English according to the person's choice, and receives Association communications in the language of their choice."),
+    H2("9. Ethical decision-making"),
+    OL([
+      "Identify the ethical issue and the persons affected.",
+      "Identify the applicable values, obligations and laws.",
+      "Consider the options and their consequences.",
+      "Consult as needed (colleagues, supervision, legal counsel).",
+      "Decide, act and document the process.",
+      "Review the decision and learn from it."
+    ]),
+    H2("10. Breaches and measures"),
+    P("Any breach may lead to measures under the Complaints-Handling Policy, ranging from a warning to removal."),
+    CALLOUT("Commitment: by joining the NBPAC, each member undertakes to respect this code and to promote its principles."),
+    CALLOUT("Note: this code draws on leading ethical practices; it should be validated by New Brunswick legal counsel and confers no exclusive right to practise.")
   ]}
 });
 
