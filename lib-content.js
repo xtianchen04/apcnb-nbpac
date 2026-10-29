@@ -189,6 +189,19 @@ DOCS.push({
     ]),
     H2("10. Manquements et mesures"),
     P("Tout manquement peut donner lieu à des mesures conformément à la Politique de traitement des plaintes, pouvant aller de l'avertissement à la radiation."),
+    H2("11. Glossaire"),
+    UL([
+      "**Personne** : toute personne ou tout groupe servi ou touché par la pratique du criminologue (personnes victimes, personnes contrevenantes, organisations, tribunaux, communautés).",
+      "**Consentement éclairé** : accord libre donné après une information suffisante sur la nature, les buts, les limites et les risques de l'intervention.",
+      "**Confidentialité** : obligation de protéger les renseignements obtenus et de ne les divulguer qu'avec consentement ou lorsque la loi l'exige.",
+      "**Compétence** : connaissances, habiletés et jugement requis pour exercer avec rigueur dans son champ.",
+      "**Conflit d'intérêts** : situation où un intérêt personnel risque d'influer sur le jugement professionnel.",
+      "**Relation double ou multiple** : lien supplémentaire à la relation professionnelle, susceptible de nuire à la personne ou d'exposer à un conflit d'intérêts.",
+      "**Champ d'exercice** : ensemble des activités que le criminologue peut exercer selon sa compétence et son domaine.",
+      "**Acte réservé** : activité qu'une loi réserve à une profession réglementée.",
+      "**Sécurisation culturelle** : pratique respectueuse des cultures, des langues et des perspectives, notamment celles des peuples autochtones, qui favorise un environnement sûr.",
+      "**Données probantes** : résultats fiables issus de la recherche et de méthodes reconnues."
+    ]),
     CALLOUT("Engagement : en adhérant à l'APCNB, chaque membre s'engage à respecter le présent code et à en promouvoir les principes."),
     CALLOUT("Avis : ce code s'inspire des meilleures pratiques déontologiques; il devrait être validé par un conseiller juridique du Nouveau-Brunswick et ne confère aucun droit d'exercice exclusif.")
   ]},
@@ -269,6 +282,19 @@ DOCS.push({
     ]),
     H2("10. Breaches and measures"),
     P("Any breach may lead to measures under the Complaints-Handling Policy, ranging from a warning to removal."),
+    H2("11. Glossary"),
+    UL([
+      "**Person** : any person or group served or affected by the criminologist's practice (victims, people who have offended, organizations, courts, communities).",
+      "**Informed consent** : free agreement given after sufficient information on the nature, purposes, limits and risks of the intervention.",
+      "**Confidentiality** : the duty to protect information obtained and to disclose it only with consent or where required by law.",
+      "**Competence** : the knowledge, skills and judgment required to practise rigorously within one's field.",
+      "**Conflict of interest** : a situation where a personal interest may influence professional judgment.",
+      "**Dual or multiple relationship** : a relationship in addition to the professional one that may harm the person or create a conflict of interest.",
+      "**Scope of practice** : the activities a criminologist may perform according to their competence and field.",
+      "**Reserved act** : an activity that a law reserves to a regulated profession.",
+      "**Cultural safety** : practice that respects cultures, languages and perspectives, including those of Indigenous peoples, fostering a safe environment.",
+      "**Evidence** : reliable findings from research and recognized methods."
+    ]),
     CALLOUT("Commitment: by joining the NBPAC, each member undertakes to respect this code and to promote its principles."),
     CALLOUT("Note: this code draws on leading ethical practices; it should be validated by New Brunswick legal counsel and confers no exclusive right to practise.")
   ]}

@@ -174,14 +174,14 @@ function buildStandard(spec, mode) {
   if (mode !== "en") {
     children.push(
       ...titleBlock("Français", spec.fr.title),
-      ...metaBlock("Organisme", C.NAME_FR + " (APCNB)", "Adopté le", "2 juin 2026", "Mise à jour", "25 septembre 2026"),
+      ...metaBlock("Organisme", C.NAME_FR + " (APCNB)", "Adopté le", "2 juin 2026", "Mise à jour", "29 octobre 2026"),
       ...spec.fr.blocks.flatMap(renderBlock));
   }
   if (mode === "both") children.push(new Paragraph({ children: [new PageBreak()] }));
   if (mode !== "fr") {
     children.push(
       ...titleBlock("English", spec.en.title),
-      ...metaBlock("Organization", C.NAME_EN + " (NBPAC)", "Adopted", "June 2, 2026", "Updated", "September 25, 2026"),
+      ...metaBlock("Organization", C.NAME_EN + " (NBPAC)", "Adopted", "June 2, 2026", "Updated", "October 29, 2026"),
       ...spec.en.blocks.flatMap(renderBlock));
   }
 
